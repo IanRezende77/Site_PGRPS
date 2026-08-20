@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como funciona o GRP — do levantamento ao acompanhamento</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./ComoFunciona.css">
+<script src="./site.js" defer></script>
+</helmet>
+<dc-import name="Header" hint-size="100%,72px"></dc-import>
+<main class="como-funciona-style-001">
+
+<section class="como-funciona-style-002">
+  <div class="como-funciona-style-003">
+    <div class="como-funciona-style-004">Como funciona</div>
+    <h1 class="como-funciona-style-005">Do levantamento ao acompanhamento, em um processo só.</h1>
+    <p class="como-funciona-style-006">O GRP conduz as seis etapas do gerenciamento de riscos psicossociais — da estrutura organizacional à reavaliação de eficácia — mantendo cada decisão registrada e cada resultado protegido.</p>
+  </div>
+</section>
+
+<sc-for list="{{ etapas }}" as="e" hint-placeholder-count="6">
+  <section class="como-funciona-style-007 process-step {{ e.theme }}">
+    <div class="como-funciona-style-008 process-row {{ e.dir }}">
+      <div class="como-funciona-style-009">
+        <div class="como-funciona-style-010">{{ e.n }}</div>
+        <h2 class="como-funciona-style-011">{{ e.titulo }}</h2>
+        <p class="como-funciona-style-012">{{ e.texto }}</p>
+        <div class="como-funciona-style-013">
+          <span class="como-funciona-style-014">O que sai daqui: </span><span class="como-funciona-style-015">{{ e.saida }}</span>
+        </div>
+      </div>
+      <div class="como-funciona-style-016">
+        <dc-import name="PlaceholderScreenshot" label="{{ e.shot }}" slot-id="{{ e.slotId }}" hint-size="100%,100%" class="como-funciona-style-017"></dc-import>
+      </div>
+    </div>
+  </section>
+</sc-for>
+
+<section class="como-funciona-style-018">
+  <div class="como-funciona-style-019">
+    <h2 class="como-funciona-style-020">Ao final de um ciclo, você tem:</h2>
+    <div class="como-funciona-style-021">
+      <sc-for list="{{ entregaveis }}" as="it" hint-placeholder-count="7">
+        <div class="como-funciona-style-022">
+          <span aria-hidden="true" class="como-funciona-style-023"></span>
+          <span class="como-funciona-style-024">{{ it }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section class="como-funciona-style-025">
+  <div class="como-funciona-style-003">
+    <div class="como-funciona-style-026">
+      <h2 class="como-funciona-style-027">Onde o GRP para — de propósito.</h2>
+      <div class="como-funciona-style-028">
+        <sc-for list="{{ naoFaz }}" as="nf" hint-placeholder-count="5">
+          <div class="como-funciona-style-029">{{ nf }}</div>
+        </sc-for>
+      </div>
+      <p class="como-funciona-style-030">Num mercado que promete automação total, dizer onde a máquina para é o que dá segurança ao profissional que assina.</p>
+    </div>
+  </div>
+</section>
+
+<section class="como-funciona-style-031">
+  <div class="como-funciona-style-032">
+    <h2 class="como-funciona-style-033">Transforme informações dispersas em um processo organizado, documentado e tecnicamente validável.</h2>
+    <div class="como-funciona-style-034">
+      <a href="Demonstracao.dc.html" class="como-funciona-style-035 action-button">Solicitar demonstração</a>
+      <a href="{{ whatsappUrl }}" class="como-funciona-style-036">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="como-funciona-style-037">
+  <div class="como-funciona-style-038">
+    <div>
+      <div class="como-funciona-style-039">GRP</div>
+      <p class="como-funciona-style-040">Gestão de Riscos Psicossociais</p>
+    </div>
+    <div>
+      <div class="como-funciona-style-041">Produto</div>
+      <div class="como-funciona-style-042">
+        <a href="ComoFunciona.dc.html" class="como-funciona-style-043">Como funciona</a>
+        <a href="Produtos.dc.html" class="como-funciona-style-043">Produtos</a>
+        <a href="Confidencialidade.dc.html" class="como-funciona-style-043">Confidencialidade</a>
+        <a href="Demonstracao.dc.html" class="como-funciona-style-043">Solicitar demonstração</a>
+      </div>
+    </div>
+    <div>
+      <div class="como-funciona-style-041">Legal</div>
+      <div class="como-funciona-style-042">
+        <a href="legal/Privacidade.dc.html" class="como-funciona-style-043">Política de Privacidade</a>
+        <a href="legal/Termos.dc.html" class="como-funciona-style-043">Termos de Uso</a>
+      </div>
+    </div>
+    <div>
+      <div class="como-funciona-style-041">Contato</div>
+      <div class="como-funciona-style-044">
+        <a href="{{ whatsappUrl }}" class="como-funciona-style-045">Falar no WhatsApp</a>
+        <span class="como-funciona-style-046">CNPJ: [A DEFINIR]</span>
+        <span class="como-funciona-style-046">Endereço: [A DEFINIR]</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      whatsappUrl: 'https://wa.me/[NUMERO]?text=' + encodeURIComponent('Olá, vim pelo site do GRP e quero uma demonstração.'),
+      etapas: [
+        { n: '1', titulo: 'Estrutura organizacional', texto: 'Importe as unidades, os setores e os quantitativos de trabalhadores — sem base nominal. O sistema cria o GHE-PS automaticamente antes da campanha, agrupando por cargo, setor e unidade, sempre com o mínimo de 10 pessoas — submetido à aprovação do Responsável Técnico.', saida: 'a estrutura de grupos pronta para a campanha, já aprovada e validada contra grupos pequenos demais.', shot: 'Estrutura organizacional e grupos de análise (GHE-PS)', slotId: 'shot-cf-1', dir: 'row', theme: 'step-light' },
+        { n: '2', titulo: 'Planejamento da campanha', texto: 'Defina o instrumento, o período e os grupos que participam. O GRP trabalha com questionários validados — COPSOQ II/III, FPSICO, JSS, HSE — com o instrumento próprio do GRP ou com um questionário do cliente. O responsável técnico parametriza as regras de cálculo, que ficam versionadas — cada campanha guarda exatamente com que critério foi avaliada.', saida: 'uma campanha configurada, com método e período definidos.', shot: 'Tela de criação de campanha', slotId: 'shot-cf-2', dir: 'row-reverse', theme: 'step-soft' },
+        { n: '3', titulo: 'Distribuição do acesso', texto: 'A campanha escolhe entre dois modos, sempre sem identificação do respondente. No analógico, o sistema gera documentos impressos com código único e QR Code, distribuídos de forma aleatória em urna sob supervisão da representação prevista na NR-5. No digital, o acesso é distribuído por link ou código individual, sem cadastro, direto para o navegador do trabalhador.', saida: 'os códigos de acesso prontos para entregar aos trabalhadores, no formato escolhido para a campanha.', shot: 'Geração de códigos e QR Code', slotId: 'shot-cf-3', dir: 'row', theme: 'step-light' },
+        { n: '4', titulo: 'Respostas anônimas', texto: 'O trabalhador acessa pelo código, responde no navegador do próprio celular e confirma o envio. O código diz ao sistema a qual campanha e grupo a resposta pertence — nunca quem respondeu.', saida: 'respostas coletadas sem vínculo com a identidade de ninguém.', shot: 'Tela do respondente', slotId: 'shot-cf-4', dir: 'row-reverse', theme: 'step-soft' },
+        { n: '5', titulo: 'Consolidação e análise', texto: 'Os resultados são consolidados de forma coletiva, com medidas de dispersão por perigo. Grupos abaixo do mínimo não geram resultado isolado, e combinações de filtros que permitiriam reidentificação são bloqueadas. Aqui também entram as evidências qualitativas — entrevistas, observações de campo e documentos — ligadas a cada risco.', saida: 'o retrato coletivo dos riscos, pronto para avaliação técnica.', shot: 'Painel de resultados coletivos', slotId: 'shot-cf-5', dir: 'row', theme: 'step-light' },
+        { n: '6', titulo: 'Plano de ação e acompanhamento', texto: 'Com as respostas recebidas, o sistema atualiza o GHE-PS automaticamente — sempre com o mínimo de 10 por grupo — e submete a nova definição a uma segunda aprovação do Responsável Técnico. É esse recorte, já aprovado duas vezes, que sustenta a emissão do inventário de riscos psicossociais, com severidade, probabilidade e grupos expostos. Cada risco recebe um plano de ação com responsável, prazo e evidência. Inventário e plano são assinados eletronicamente pelo responsável técnico, e a base aprovada fica bloqueada. No ciclo seguinte, o GRP compara os resultados e mostra se a medida funcionou.', saida: 'inventário e plano de ação assinados, mais o registro de eficácia para o próximo ciclo.', shot: 'Inventário e plano de ação com responsáveis e prazos', slotId: 'shot-cf-6', dir: 'row-reverse', theme: 'step-soft' },
+      ],
+      entregaveis: [
+        'Relatório coletivo da campanha',
+        'Mapa de riscos psicossociais',
+        'Inventário de riscos estruturado para o AEP, o GRO e o PGR',
+        'Plano de ação com responsáveis, prazos e evidências',
+        'Documentos assinados eletronicamente pelo responsável técnico',
+        'Histórico completo da campanha e trilha de auditoria',
+        'Base para a reavaliação de eficácia no ciclo seguinte',
+      ],
+      naoFaz: [
+        'Não emite laudo automático nem garante, por si só, conformidade com a NR-1.',
+        'Não faz diagnóstico clínico, médico ou psicológico de indivíduos.',
+        'Não gera ranking nem perfil de trabalhador.',
+        'Não guarda cadastro nominal dos respondentes.',
+        'Não substitui o responsável técnico: a classificação e a aprovação são dele.',
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

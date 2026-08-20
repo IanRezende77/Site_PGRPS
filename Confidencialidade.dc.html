@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Confidencialidade e anonimato — GRP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./Confidencialidade.css">
+<script src="./site.js" defer></script>
+</helmet>
+<dc-import name="Header" hint-size="100%,72px"></dc-import>
+<main class="confidencialidade-style-001">
+  <div class="confidencialidade-style-002">
+    <nav aria-label="Sumário" class="confidencialidade-style-003">
+      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="7">
+        <a href="{{ s.href }}" class="confidencialidade-style-004">{{ s.label }}</a>
+      </sc-for>
+    </nav>
+    <article class="confidencialidade-style-005">
+      <h1 class="confidencialidade-style-006">Confidencialidade e anonimato</h1>
+      <p class="confidencialidade-style-007">A confiança dos participantes é a condição para que a avaliação represente a realidade da organização. Se o trabalhador não acredita que a resposta é protegida, o resultado não serve para decidir nada. Por isso, a proteção das respostas foi tratada como requisito de projeto, não como configuração.</p>
+
+      <section id="o-que-a-plataforma-nao-faz" class="confidencialidade-style-008">
+        <h2 class="confidencialidade-style-009">O que a plataforma não faz</h2>
+        <ul class="confidencialidade-style-010">
+          <li class="confidencialidade-style-011">Não mantém cadastro nominal dos respondentes.</li>
+          <li class="confidencialidade-style-011">Não apresenta resposta individual a nenhum perfil de usuário, incluindo o administrador da empresa.</li>
+          <li class="confidencialidade-style-011">Não gera resultado separado para grupos abaixo do tamanho mínimo.</li>
+          <li class="confidencialidade-style-011">Não emite diagnóstico clínico e não avalia indivíduos.</li>
+          <li class="confidencialidade-style-011">Não compartilha dados entre empresas diferentes.</li>
+        </ul>
+      </section>
+
+      <section id="como-o-acesso-funciona" class="confidencialidade-style-008">
+        <h2 class="confidencialidade-style-009">Como o acesso funciona</h2>
+        <p class="confidencialidade-style-012">O participante recebe um código de campanha, por QR Code, link ou papel. Não há login, cadastro, e-mail ou qualquer identificação pessoal solicitada. O código serve para dizer ao sistema <strong class="confidencialidade-style-013">a qual campanha e a qual grupo</strong> aquela resposta pertence — não quem a enviou.</p>
+      </section>
+
+      <section id="resultados-coletivos" class="confidencialidade-style-008">
+        <h2 class="confidencialidade-style-009">Resultados coletivos e tamanho mínimo</h2>
+        <p class="confidencialidade-style-014">Os resultados são sempre apresentados de forma agregada. Quando um grupo tem menos de <strong class="confidencialidade-style-013">10 participantes</strong>, o sistema não exibe o resultado daquele grupo isoladamente — os dados são somados a um nível acima da estrutura organizacional. Esse mínimo pode ser elevado pela organização, nunca reduzido.</p>
+        <p class="confidencialidade-style-012"><strong class="confidencialidade-style-013">Proteção contra reidentificação por cruzamento.</strong> Além do grupo mínimo, o GRP bloqueia combinações de filtros que, somadas, permitiriam deduzir quem respondeu. Um relatório que revelaria um respondente por eliminação não é publicado.</p>
+      </section>
+
+      <section id="dois-modos-de-coleta" class="confidencialidade-style-008">
+        <h2 class="confidencialidade-style-009">Dois modos de coleta, a critério de cada campanha</h2>
+        <p class="confidencialidade-style-014">A empresa escolhe, campanha a campanha, como o acesso é distribuído. Os dois modos seguem o mesmo princípio: nenhum vínculo entre a pessoa e a resposta.</p>
+        <div class="confidencialidade-style-015">
+          <div class="confidencialidade-style-016 surface-card">
+            <div class="confidencialidade-style-017">Anonimato analógico</div>
+            <p class="confidencialidade-style-018">A campanha usa documentos impressos, cada um com um código único e um QR Code. Os documentos são distribuídos de forma aleatória, em urna ou caixa, sob supervisão da representação prevista na NR-5. O trabalhador responde sem login e sem identificação.</p>
+          </div>
+          <div class="confidencialidade-style-016 surface-card">
+            <div class="confidencialidade-style-017">Anonimato digital</div>
+            <p class="confidencialidade-style-018">O acesso é distribuído por link ou código individual, sem cadastro nem e-mail vinculado à resposta. O trabalhador acessa pelo navegador do próprio celular ou computador, sem instalar nada.</p>
+          </div>
+        </div>
+        <p class="confidencialidade-style-012">Nos dois casos, o código diz ao sistema apenas a qual campanha e a qual grupo aquela resposta pertence — nunca quem a enviou.</p>
+      </section>
+
+      <section id="separacao-entre-empresas" class="confidencialidade-style-008">
+        <h2 class="confidencialidade-style-009">Separação entre empresas</h2>
+        <p class="confidencialidade-style-012">Cada organização opera em um ambiente próprio. Consultorias que atendem vários clientes acessam cada um separadamente, sem que dados de um apareçam no outro.</p>
+      </section>
+
+      <section id="registro-e-auditoria" class="confidencialidade-style-008">
+        <h2 class="confidencialidade-style-009">Registro e auditoria</h2>
+        <p class="confidencialidade-style-012">As ações relevantes ficam registradas: quem acessou, quem classificou o risco, quem aprovou o documento e quando. Esse histórico existe para dar rastreabilidade ao processo — e nunca alcança o conteúdo de uma resposta individual.</p>
+      </section>
+
+      <section id="protecao-de-dados" class="confidencialidade-style-008">
+        <h2 class="confidencialidade-style-009">Proteção de dados</h2>
+        <div class="confidencialidade-style-019 surface-card">[A DEFINIR — a equipe precisa fechar antes da publicação: prazo de retenção, política de exclusão, papéis de controlador e operador, canal de atendimento ao titular. Esta seção fica estruturada e vazia até a definição.]</div>
+      </section>
+
+      <div class="confidencialidade-style-020">
+        <p class="confidencialidade-style-021">Nenhum sistema deve prometer anonimato absoluto. O que descrevemos aqui são os mecanismos concretos que o GRP adota para proteger as respostas e evitar a reidentificação dos participantes.</p>
+      </div>
+
+      <section id="material-para-comunicar" class="confidencialidade-style-022">
+        <h2 class="confidencialidade-style-009">Material para comunicar aos trabalhadores</h2>
+        <p class="confidencialidade-style-014">Uma campanha bem comunicada tem taxa de resposta maior e resultado mais confiável. Disponibilizamos um modelo de comunicado pronto para a organização adaptar e enviar.</p>
+        <sc-if value="{{ !comunicadoEnviado }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ enviarComunicado }}" class="confidencialidade-style-023">
+            <label for="email-comunicado" class="confidencialidade-style-024">E-mail</label>
+            <input id="email-comunicado" type="email" required="true" placeholder="seu@email.com.br" value="{{ emailComunicado }}" onChange="{{ setEmailComunicado }}" class="confidencialidade-style-025"/>
+            <button type="submit" class="confidencialidade-style-026 action-button">Receber o modelo de comunicado</button>
+          </form>
+        </sc-if>
+        <sc-if value="{{ comunicadoEnviado }}" hint-placeholder-val="{{ false }}">
+          <div class="confidencialidade-style-027">Modelo enviado para o e-mail informado.</div>
+        </sc-if>
+      </section>
+    </article>
+  </div>
+</main>
+<footer class="confidencialidade-style-028">
+  <div class="confidencialidade-style-029">
+    <div>
+      <div class="confidencialidade-style-030">GRP</div>
+      <p class="confidencialidade-style-031">Gestão de Riscos Psicossociais</p>
+    </div>
+    <div>
+      <div class="confidencialidade-style-032">Produto</div>
+      <div class="confidencialidade-style-033">
+        <a href="index.html#como-funciona" class="confidencialidade-style-034">Como funciona</a>
+        <a href="Confidencialidade.dc.html" class="confidencialidade-style-034">Confidencialidade</a>
+        <a href="Demonstracao.dc.html" class="confidencialidade-style-034">Solicitar demonstração</a>
+      </div>
+    </div>
+    <div>
+      <div class="confidencialidade-style-032">Legal</div>
+      <div class="confidencialidade-style-033">
+        <a href="legal/Privacidade.dc.html" class="confidencialidade-style-034">Política de Privacidade</a>
+        <a href="legal/Termos.dc.html" class="confidencialidade-style-034">Termos de Uso</a>
+      </div>
+    </div>
+    <div>
+      <div class="confidencialidade-style-032">Contato</div>
+      <div class="confidencialidade-style-035">
+        <a href="#" class="confidencialidade-style-036">Falar no WhatsApp</a>
+        <span class="confidencialidade-style-037">CNPJ: [A DEFINIR]</span>
+        <span class="confidencialidade-style-037">Endereço: [A DEFINIR]</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { emailComunicado: '', comunicadoEnviado: false };
+  renderVals() {
+    return {
+      sumario: [
+        { label: 'O que a plataforma não faz', href: '#o-que-a-plataforma-nao-faz' },
+        { label: 'Como o acesso funciona', href: '#como-o-acesso-funciona' },
+        { label: 'Resultados coletivos', href: '#resultados-coletivos' },
+        { label: 'Dois modos de coleta', href: '#dois-modos-de-coleta' },
+        { label: 'Separação entre empresas', href: '#separacao-entre-empresas' },
+        { label: 'Registro e auditoria', href: '#registro-e-auditoria' },
+        { label: 'Proteção de dados', href: '#protecao-de-dados' },
+        { label: 'Material para comunicar', href: '#material-para-comunicar' },
+      ],
+      emailComunicado: this.state.emailComunicado,
+      comunicadoEnviado: this.state.comunicadoEnviado,
+      setEmailComunicado: (e) => this.setState({ emailComunicado: e.target.value }),
+      enviarComunicado: (e) => { e.preventDefault(); this.setState({ comunicadoEnviado: true }); },
+    };
+  }
+}
+
+</script>
+</body>
+</html>

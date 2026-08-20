@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../vendor/react.production.min.js"></script>
+<script src="../vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — GRP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./Privacidade.css">
+<script src="../site.js" defer></script>
+</helmet>
+<dc-import name="Header" from="../Header.dc.html" logo-src="../assets/grp-symbol.png" hint-size="100%,72px"></dc-import>
+<main class="privacidade-style-001">
+  <div class="privacidade-style-002">
+    <nav aria-label="Sumário" class="privacidade-style-003">
+      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="8">
+        <a href="{{ s.href }}" class="privacidade-style-004">{{ s.label }}</a>
+      </sc-for>
+    </nav>
+    <article class="privacidade-style-005">
+      <h1 class="privacidade-style-006">Política de Privacidade</h1>
+      <p class="privacidade-style-007">Última atualização: [A DEFINIR]</p>
+      <div class="privacidade-style-008 surface-card">Conteúdo jurídico pendente de revisão pelo time legal. Esta página traz apenas a estrutura de seções aprovada.</div>
+      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="8">
+        <section id="{{ s.id }}" class="privacidade-style-009">
+          <h2 class="privacidade-style-010">{{ s.label }}</h2>
+          <div class="privacidade-style-011">[Conteúdo jurídico pendente]</div>
+        </section>
+      </sc-for>
+    </article>
+  </div>
+</main>
+<footer class="privacidade-style-012">
+  <div class="privacidade-style-013">
+    <div>
+      <div class="privacidade-style-014">GRP</div>
+      <p class="privacidade-style-015">Gestão de Riscos Psicossociais</p>
+    </div>
+    <div>
+      <div class="privacidade-style-016">Produto</div>
+      <div class="privacidade-style-017">
+        <a href="../index.html#como-funciona" class="privacidade-style-018">Como funciona</a>
+        <a href="../Confidencialidade.dc.html" class="privacidade-style-018">Confidencialidade</a>
+        <a href="../Demonstracao.dc.html" class="privacidade-style-018">Solicitar demonstração</a>
+      </div>
+    </div>
+    <div>
+      <div class="privacidade-style-016">Legal</div>
+      <div class="privacidade-style-017">
+        <a href="Privacidade.dc.html" class="privacidade-style-018">Política de Privacidade</a>
+        <a href="Termos.dc.html" class="privacidade-style-018">Termos de Uso</a>
+      </div>
+    </div>
+    <div>
+      <div class="privacidade-style-016">Contato</div>
+      <div class="privacidade-style-019">
+        <a href="#" class="privacidade-style-020">Falar no WhatsApp</a>
+        <span class="privacidade-style-021">CNPJ: [A DEFINIR]</span>
+        <span class="privacidade-style-021">Endereço: [A DEFINIR]</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      sumario: [
+        { id: 'introducao', label: 'Introdução' },
+        { id: 'dados-coletados', label: 'Dados coletados' },
+        { id: 'finalidade-do-tratamento', label: 'Finalidade do tratamento' },
+        { id: 'compartilhamento-de-dados', label: 'Compartilhamento de dados' },
+        { id: 'direitos-do-titular', label: 'Direitos do titular' },
+        { id: 'retencao-e-exclusao', label: 'Retenção e exclusão' },
+        { id: 'seguranca-da-informacao', label: 'Segurança da informação' },
+        { id: 'contato-do-encarregado', label: 'Contato do encarregado' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

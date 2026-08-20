@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./Header.css">
+<script src="./site.js" defer></script>
+</helmet>
+<header class="header-style-001 site-header {{ headerClass }}">
+  <div class="header-style-002">
+    <a href="index.html" class="header-style-003">
+      <img src="{{ logoSrc }}" alt="GRP — Gestão de Riscos Psicossociais" class="header-style-004"/>
+    </a>
+    <sc-if value="{{ !isMobile }}" hint-placeholder-val="{{ true }}">
+      <nav class="header-style-005">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="6">
+          <a href="{{ item.href }}" class="header-style-006 header-state-007">{{ item.label }}</a>
+        </sc-for>
+        <a href="Demonstracao.dc.html" class="header-style-008 action-button header-state-009">Solicitar demonstração</a>
+        <a href="#" title="Em breve" class="header-style-010 header-state-011">Entrar</a>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button onClick="{{ toggleMenu }}" aria-label="Abrir menu" aria-expanded="{{ menuOpen }}" class="header-style-012 header-state-013">
+        <span class="header-style-014"></span>
+        <span class="header-style-014"></span>
+        <span class="header-style-014"></span>
+      </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ isMobile && menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeMenu }}" class="header-style-015"></div>
+    <div role="dialog" aria-label="Menu" class="header-style-016">
+      <div class="header-style-017">
+        <button onClick="{{ closeMenu }}" aria-label="Fechar menu" class="header-style-018 header-state-019">×</button>
+      </div>
+      <nav class="header-style-020">
+        <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="6">
+          <a href="{{ item.href }}" onClick="{{ closeMenu }}" class="header-style-021">{{ item.label }}</a>
+        </sc-for>
+        <a href="#" title="Em breve" onClick="{{ closeMenu }}" class="header-style-022">Entrar</a>
+      </nav>
+      <a href="Demonstracao.dc.html" class="header-style-023 action-button">Solicitar demonstração</a>
+    </div>
+  </sc-if>
+</header>
+<div class="header-style-024"></div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;logoSrc&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;assets/grp-symbol.png&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled: false, isMobile: typeof window !== 'undefined' && window.innerWidth <= 1080, menuOpen: false };
+
+  componentDidMount() {
+    this._onScroll = () => {
+      const s = window.scrollY > 40;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    this._onResize = () => {
+      const m = window.innerWidth <= 1080;
+      if (m !== this.state.isMobile) this.setState({ isMobile: m, menuOpen: m ? this.state.menuOpen : false });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onResize);
+    this._onScroll();
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._onScroll);
+    window.removeEventListener('resize', this._onResize);
+  }
+
+  renderVals() {
+    const navItems = [
+      { label: 'Início', href: 'index.html#o-grp' },
+      { label: 'Funcionalidades', href: 'ComoFunciona.dc.html' },
+      { label: 'Empresas', href: 'ParaEmpresas.dc.html' },
+      { label: 'Consultoria', href: 'ParaConsultorias.dc.html' },
+      { label: 'Produtos', href: 'Produtos.dc.html' },
+      { label: 'Confidencialidade', href: 'Confidencialidade.dc.html' },
+      { label: 'Dúvidas', href: 'index.html#duvidas' },
+    ];
+    const headerClass = this.state.scrolled ? 'is-scrolled' : '';
+
+    return {
+      logoSrc: this.props.logoSrc ?? 'assets/grp-symbol.png',
+      navItems,
+      headerClass,
+      isMobile: this.state.isMobile,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+    };
+  }
+}
+
+</script>
+</body>
+</html>

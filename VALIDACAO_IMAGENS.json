@@ -1,0 +1,119 @@
+{
+  "count": 16,
+  "unique_slot_ids": [
+    "shot-cf-1",
+    "shot-cf-2",
+    "shot-cf-3",
+    "shot-cf-4",
+    "shot-cf-5",
+    "shot-cf-6",
+    "shot-etapa-1",
+    "shot-etapa-2",
+    "shot-etapa-3",
+    "shot-etapa-4",
+    "shot-hero",
+    "shot-pc-1",
+    "shot-pe-1",
+    "shot-pilar-1",
+    "shot-pilar-2",
+    "shot-pilar-3"
+  ],
+  "references_by_page": {
+    "index.html": [
+      "shot-etapa-1",
+      "shot-etapa-2",
+      "shot-etapa-3",
+      "shot-etapa-4",
+      "shot-hero",
+      "shot-pilar-1",
+      "shot-pilar-2",
+      "shot-pilar-3"
+    ],
+    "ComoFunciona.dc.html": [
+      "shot-cf-1",
+      "shot-cf-2",
+      "shot-cf-3",
+      "shot-cf-4",
+      "shot-cf-5",
+      "shot-cf-6"
+    ],
+    "ParaEmpresas.dc.html": [
+      "shot-pe-1"
+    ],
+    "ParaConsultorias.dc.html": [
+      "shot-pc-1"
+    ]
+  },
+  "dimensions": {
+    "shot-cf-1": [
+      1600,
+      1200
+    ],
+    "shot-cf-2": [
+      1600,
+      1200
+    ],
+    "shot-cf-3": [
+      1600,
+      1200
+    ],
+    "shot-cf-4": [
+      1600,
+      1200
+    ],
+    "shot-cf-5": [
+      1600,
+      1200
+    ],
+    "shot-cf-6": [
+      1600,
+      1200
+    ],
+    "shot-etapa-1": [
+      1600,
+      1200
+    ],
+    "shot-etapa-2": [
+      1600,
+      1200
+    ],
+    "shot-etapa-3": [
+      1600,
+      1200
+    ],
+    "shot-etapa-4": [
+      1600,
+      1200
+    ],
+    "shot-hero": [
+      1600,
+      1200
+    ],
+    "shot-pc-1": [
+      1600,
+      1200
+    ],
+    "shot-pe-1": [
+      1330,
+      962
+    ],
+    "shot-pilar-1": [
+      1600,
+      1200
+    ],
+    "shot-pilar-2": [
+      1600,
+      1200
+    ],
+    "shot-pilar-3": [
+      1600,
+      1200
+    ]
+  },
+  "missing_assets": [],
+  "extra_assets": [],
+  "invalid_images": [],
+  "uses_image_slot_runtime": [],
+  "rendering": "plain static <img> with src assets/slots/{{ slotId }}.png",
+  "visual_update": "screenshots reais do projeto GRP, recortados para destacar a área útil e apresentados em moldura profissional; layout ampliado para melhor uso da largura disponível"
+}

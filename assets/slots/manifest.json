@@ -1,0 +1,130 @@
+{
+  "shot-cf-1": {
+    "file": "assets/slots/shot-cf-1.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 36975
+  },
+  "shot-cf-2": {
+    "file": "assets/slots/shot-cf-2.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 37337
+  },
+  "shot-cf-3": {
+    "file": "assets/slots/shot-cf-3.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 40061
+  },
+  "shot-cf-4": {
+    "file": "assets/slots/shot-cf-4.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 40415
+  },
+  "shot-cf-5": {
+    "file": "assets/slots/shot-cf-5.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 40540
+  },
+  "shot-cf-6": {
+    "file": "assets/slots/shot-cf-6.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 39009
+  },
+  "shot-etapa-1": {
+    "file": "assets/slots/shot-etapa-1.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 97829
+  },
+  "shot-etapa-2": {
+    "file": "assets/slots/shot-etapa-2.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 95751
+  },
+  "shot-etapa-3": {
+    "file": "assets/slots/shot-etapa-3.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 103213
+  },
+  "shot-etapa-4": {
+    "file": "assets/slots/shot-etapa-4.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 105967
+  },
+  "shot-hero": {
+    "file": "assets/slots/shot-hero.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 108721
+  },
+  "shot-pc-1": {
+    "file": "assets/slots/shot-pc-1.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 117854
+  },
+  "shot-pe-1": {
+    "file": "assets/slots/shot-pe-1.png",
+    "size": [
+      1330,
+      962
+    ],
+    "bytes": 170847
+  },
+  "shot-pilar-1": {
+    "file": "assets/slots/shot-pilar-1.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 85243
+  },
+  "shot-pilar-2": {
+    "file": "assets/slots/shot-pilar-2.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 87027
+  },
+  "shot-pilar-3": {
+    "file": "assets/slots/shot-pilar-3.png",
+    "size": [
+      1600,
+      1200
+    ],
+    "bytes": 99894
+  }
+}

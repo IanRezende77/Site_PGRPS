@@ -1,0 +1,23 @@
+GRP — site final corrigido
+
+Como abrir:
+1. Abra esta pasta no VS Code.
+2. Clique em "Go Live" ou abra index.html com o Live Server.
+3. Abra o index.html; ele agora contém a página principal completa.
+
+As 16 imagens estão em assets/slots/ e são carregadas como arquivos PNG estáticos.
+O site não depende mais de .image-slots.state.json nem do componente image-slot para exibir as imagens.
+
+Validação técnica:
+- 16 slots identificados.
+- 16 arquivos de imagem correspondentes.
+- Nenhum arquivo ausente ou inválido.
+- Todos os arquivos responderam HTTP 200 em servidor local.
+- Consulte VALIDACAO_IMAGENS.json para o relatório.
+
+Atualização visual 19/08/2026:
+- Conteúdo passou a usar uma largura útil maior em desktop, com alternância entre seções full-bleed e seções recuadas/arredondadas.
+- Os 16 slots de imagens foram substituídos por ilustrações simbólicas conceituais e leves, pensadas para serem trocadas por capturas reais do sistema quando as telas atualizadas estiverem prontas.
+- O componente PlaceholderScreenshot agora preserva proporção e centralização sem cortar a imagem.
+
+Atualização 20/08/2026: imagens das áreas de processo/funcionalidades substituídas por capturas do projeto PGRPS e layout ajustado para aproveitar mais a largura da tela.

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="stylesheet" href="./FAQAccordion.css">
+<script src="./site.js" defer></script>
+</helmet>
+<div class="faq-accordion-style-001">
+  <sc-for list="{{ rows }}" as="row" hint-placeholder-count="8">
+    <div class="faq-accordion-style-002">
+      <button onClick="{{ row.toggle }}" aria-expanded="{{ row.open }}" class="faq-accordion-style-003 faq-accordion-state-004">
+        <span>{{ row.q }}</span>
+        <span aria-hidden="true" class="faq-accordion-style-005 faq-icon {{ row.open ? 'is-open' : '' }}">+</span>
+      </button>
+      <sc-if value="{{ row.open }}" hint-placeholder-val="{{ false }}">
+        <div class="faq-accordion-style-006">{{ row.a }}</div>
+      </sc-if>
+    </div>
+  </sc-for>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:700,&quot;height&quot;:500},&quot;items&quot;:{&quot;editor&quot;:null,&quot;default&quot;:[],&quot;tsType&quot;:&quot;{q:string,a:string}[]&quot;}}">
+class Component extends DCLogic {
+  state = { openIndex: null };
+  renderVals() {
+    const items = this.props.items || [];
+    const rows = items.map((it, i) => ({
+      q: it.q,
+      a: it.a,
+      open: this.state.openIndex === i,
+      iconRotate: this.state.openIndex === i ? 'rotate(45deg)' : 'rotate(0deg)',
+      toggle: () => this.setState(s => ({ openIndex: s.openIndex === i ? null : i })),
+    }));
+    return { rows };
+  }
+}
+
+</script>
+</body>
+</html>

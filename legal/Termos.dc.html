@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="../vendor/react.production.min.js"></script>
+<script src="../vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termos de Uso — GRP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./Termos.css">
+<script src="../site.js" defer></script>
+</helmet>
+<dc-import name="Header" from="../Header.dc.html" logo-src="../assets/grp-symbol.png" hint-size="100%,72px"></dc-import>
+<main class="termos-style-001">
+  <div class="termos-style-002">
+    <nav aria-label="Sumário" class="termos-style-003">
+      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="9">
+        <a href="{{ s.href }}" class="termos-style-004">{{ s.label }}</a>
+      </sc-for>
+    </nav>
+    <article class="termos-style-005">
+      <h1 class="termos-style-006">Termos de Uso</h1>
+      <p class="termos-style-007">Última atualização: [A DEFINIR]</p>
+      <div class="termos-style-008 surface-card">Conteúdo jurídico pendente de revisão pelo time legal. Esta página traz apenas a estrutura de seções aprovada.</div>
+      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="9">
+        <section id="{{ s.id }}" class="termos-style-009">
+          <h2 class="termos-style-010">{{ s.label }}</h2>
+          <div class="termos-style-011">[Conteúdo jurídico pendente]</div>
+        </section>
+      </sc-for>
+    </article>
+  </div>
+</main>
+<footer class="termos-style-012">
+  <div class="termos-style-013">
+    <div>
+      <div class="termos-style-014">GRP</div>
+      <p class="termos-style-015">Gestão de Riscos Psicossociais</p>
+    </div>
+    <div>
+      <div class="termos-style-016">Produto</div>
+      <div class="termos-style-017">
+        <a href="../index.html#como-funciona" class="termos-style-018">Como funciona</a>
+        <a href="../Confidencialidade.dc.html" class="termos-style-018">Confidencialidade</a>
+        <a href="../Demonstracao.dc.html" class="termos-style-018">Solicitar demonstração</a>
+      </div>
+    </div>
+    <div>
+      <div class="termos-style-016">Legal</div>
+      <div class="termos-style-017">
+        <a href="Privacidade.dc.html" class="termos-style-018">Política de Privacidade</a>
+        <a href="Termos.dc.html" class="termos-style-018">Termos de Uso</a>
+      </div>
+    </div>
+    <div>
+      <div class="termos-style-016">Contato</div>
+      <div class="termos-style-019">
+        <a href="#" class="termos-style-020">Falar no WhatsApp</a>
+        <span class="termos-style-021">CNPJ: [A DEFINIR]</span>
+        <span class="termos-style-021">Endereço: [A DEFINIR]</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      sumario: [
+        { id: 'aceitacao-dos-termos', label: 'Aceitação dos termos' },
+        { id: 'descricao-do-servico', label: 'Descrição do serviço' },
+        { id: 'cadastro-e-conta', label: 'Cadastro e conta' },
+        { id: 'uso-permitido', label: 'Uso permitido' },
+        { id: 'propriedade-intelectual', label: 'Propriedade intelectual' },
+        { id: 'responsabilidades', label: 'Responsabilidades' },
+        { id: 'cancelamento', label: 'Cancelamento' },
+        { id: 'alteracoes-destes-termos', label: 'Alterações destes termos' },
+        { id: 'foro-e-legislacao-aplicavel', label: 'Foro e legislação aplicável' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

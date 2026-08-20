@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GRP para empresas — riscos psicossociais no seu GRO/PGR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./ParaEmpresas.css">
+<script src="./site.js" defer></script>
+</helmet>
+<dc-import name="Header" hint-size="100%,72px"></dc-import>
+<main class="para-empresas-style-001">
+
+<section class="para-empresas-style-002">
+  <div class="para-empresas-style-003">
+    <div class="para-empresas-style-004">Para empresas</div>
+    <h1 class="para-empresas-style-005">O que você mostra quando pedirem a evidência?</h1>
+    <p class="para-empresas-style-006">Campanha anônima, análise coletiva, inventário de riscos e plano de ação com responsável, prazo e comprovação — organizados para entrar no seu GRO/PGR.</p>
+    <div class="para-empresas-style-007">
+      <a href="Demonstracao.dc.html" class="para-empresas-style-008 action-button">Solicitar demonstração</a>
+      <a href="ComoFunciona.dc.html" class="para-empresas-style-009">Ver como funciona</a>
+    </div>
+  </div>
+</section>
+
+<section class="para-empresas-style-010">
+  <div class="para-empresas-style-003">
+    <p class="para-empresas-style-011">Desde 26 de maio de 2026 a fiscalização da NR-1 deixou de ser orientativa. A norma pede que os fatores psicossociais sejam identificados, avaliados, tratados e acompanhados como qualquer outro risco ocupacional — e que exista evidência do que foi feito. Não é um diagnóstico de saúde mental; é gestão organizacional documentada.</p>
+  </div>
+</section>
+
+<section class="para-empresas-style-012">
+  <div class="para-empresas-style-013">
+    <h2 class="para-empresas-style-014">Como funciona, em 4 passos</h2>
+    <div class="para-empresas-style-015">
+      <sc-for list="{{ passos }}" as="p" hint-placeholder-count="4">
+        <div class="para-empresas-style-016 surface-card">
+          <div class="para-empresas-style-017">{{ p.n }}</div>
+          <div class="para-empresas-style-018">{{ p.titulo }}</div>
+          <div class="para-empresas-style-019">{{ p.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+    <a href="ComoFunciona.dc.html" class="para-empresas-style-020">Ver as 6 etapas completas →</a>
+  </div>
+</section>
+
+<section class="para-empresas-style-021">
+  <div class="para-empresas-style-003">
+    <h2 class="para-empresas-style-022">Se ninguém responder com sinceridade, o resultado não serve para nada.</h2>
+    <p class="para-empresas-style-023">A adesão é o maior risco operacional de uma avaliação psicossocial — e ela depende de o trabalhador acreditar que a resposta é protegida. No GRP não há cadastro nominal, o acesso é por código distribuído em urna ou por link individual, e a empresa não vê resposta individual porque a plataforma não tem como devolver isso. Para ajudar na comunicação interna, disponibilizamos um modelo de comunicado pronto para você adaptar e enviar.</p>
+    <a href="Confidencialidade.dc.html#material-para-comunicar" class="para-empresas-style-020">Receber o modelo de comunicado →</a>
+  </div>
+</section>
+
+<section class="para-empresas-style-010">
+  <div class="para-empresas-style-003">
+    <a href="Produtos.dc.html" class="para-empresas-style-020">Ver as modalidades de contratação →</a>
+  </div>
+</section>
+
+<section class="para-empresas-style-012">
+  <div class="para-empresas-style-003">
+    <h2 class="para-empresas-style-024">O que fica documentado</h2>
+    <div class="para-empresas-style-025">
+      <sc-for list="{{ documentado }}" as="d" hint-placeholder-count="6">
+        <div class="para-empresas-style-026">
+          <span aria-hidden="true" class="para-empresas-style-027"></span>
+          <span class="para-empresas-style-028">{{ d }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section class="para-empresas-style-021">
+  <div class="para-empresas-style-029">
+    <div class="para-empresas-style-030">
+      <h2 class="para-empresas-style-031">Múltiplas unidades</h2>
+      <p class="para-empresas-style-032">Se a empresa tem mais de uma unidade ou CNPJ, cada uma opera com sua própria estrutura e seus próprios resultados, com visão consolidada para a matriz.</p>
+    </div>
+    <div class="para-empresas-style-033">
+      <dc-import name="PlaceholderScreenshot" label="Estrutura organizacional da empresa em formato de organograma" slot-id="shot-pe-1" hint-size="100%,100%" class="para-empresas-style-034"></dc-import>
+    </div>
+  </div>
+</section>
+
+<section class="para-empresas-style-012">
+  <div class="para-empresas-style-035">
+    <div>
+      <h2 class="para-empresas-style-036">Já aplicamos um questionário no ano passado</h2>
+      <p class="para-empresas-style-011">Um questionário aplicado e arquivado em PDF não é o fim do processo — é o começo dele. O GRP aproveita esse levantamento como ciclo anterior, estrutura o inventário e o plano de ação que faltavam, e passa a permitir comparação a cada nova campanha.</p>
+    </div>
+    <div>
+      <h2 class="para-empresas-style-036">Quem faz a avaliação técnica</h2>
+      <p class="para-empresas-style-011">A classificação de risco e a aprovação dos documentos são feitas por profissional habilitado. Você pode usar o GRP com a sua própria equipe técnica ou com uma consultoria parceira — o sistema organiza os dados; a decisão e a assinatura são do responsável técnico.</p>
+    </div>
+  </div>
+</section>
+
+<section class="para-empresas-style-021">
+  <div class="para-empresas-style-003">
+    <h2 class="para-empresas-style-037">Dúvidas frequentes</h2>
+    <dc-import name="FAQAccordion" items="{{ faq }}" hint-size="100%,400px"></dc-import>
+  </div>
+</section>
+
+<section class="para-empresas-style-038">
+  <div class="para-empresas-style-039">
+    <h2 class="para-empresas-style-040">Transforme informações dispersas em um processo organizado, documentado e tecnicamente validável.</h2>
+    <div class="para-empresas-style-041">
+      <a href="Demonstracao.dc.html" class="para-empresas-style-008 action-button">Solicitar demonstração</a>
+      <a href="{{ whatsappUrl }}" class="para-empresas-style-042">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="para-empresas-style-043">
+  <div class="para-empresas-style-044">
+    <div>
+      <div class="para-empresas-style-045">GRP</div>
+      <p class="para-empresas-style-046">Gestão de Riscos Psicossociais</p>
+    </div>
+    <div>
+      <div class="para-empresas-style-047">Produto</div>
+      <div class="para-empresas-style-048">
+        <a href="ComoFunciona.dc.html" class="para-empresas-style-049">Como funciona</a>
+        <a href="Produtos.dc.html" class="para-empresas-style-049">Produtos</a>
+        <a href="Confidencialidade.dc.html" class="para-empresas-style-049">Confidencialidade</a>
+        <a href="Demonstracao.dc.html" class="para-empresas-style-049">Solicitar demonstração</a>
+      </div>
+    </div>
+    <div>
+      <div class="para-empresas-style-047">Legal</div>
+      <div class="para-empresas-style-048">
+        <a href="legal/Privacidade.dc.html" class="para-empresas-style-049">Política de Privacidade</a>
+        <a href="legal/Termos.dc.html" class="para-empresas-style-049">Termos de Uso</a>
+      </div>
+    </div>
+    <div>
+      <div class="para-empresas-style-047">Contato</div>
+      <div class="para-empresas-style-050">
+        <a href="{{ whatsappUrl }}" class="para-empresas-style-051">Falar no WhatsApp</a>
+        <span class="para-empresas-style-052">CNPJ: [A DEFINIR]</span>
+        <span class="para-empresas-style-052">Endereço: [A DEFINIR]</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      whatsappUrl: 'https://wa.me/[NUMERO]?text=' + encodeURIComponent('Olá, vim pelo site do GRP e quero uma demonstração.'),
+      passos: [
+        { n: '1', titulo: 'Estruturar', desc: 'Cadastre a empresa, as unidades, os setores e os grupos de análise.' },
+        { n: '2', titulo: 'Coletar', desc: 'Distribua o acesso por QR Code, link ou código. Sem login, sem cadastro.' },
+        { n: '3', titulo: 'Analisar', desc: 'Resultados consolidados de forma coletiva, submetidos à avaliação técnica.' },
+        { n: '4', titulo: 'Agir e acompanhar', desc: 'Inventário, plano de ação com responsável e prazo, e comparação entre ciclos.' },
+      ],
+      documentado: [
+        'Inventário de riscos',
+        'Plano de ação com responsável e prazo',
+        'Evidências anexadas',
+        'Histórico da campanha',
+        'Documentos assinados pelo responsável técnico',
+        'Comparação entre ciclos',
+      ],
+      faq: [
+        { q: 'Precisamos ter psicólogo na equipe?', a: 'Não necessariamente. A avaliação técnica pode ser feita por profissional habilitado da sua empresa ou por uma consultoria parceira. O GRP organiza os dados para esse profissional trabalhar.' },
+        { q: 'Quantos trabalhadores são necessários?', a: 'O GRP funciona a partir de qualquer porte, mas grupos com menos de 10 pessoas têm os dados agregados em nível acima, para proteger o anonimato.' },
+        { q: 'Os dados ficam com a gente?', a: 'Sim. Cada empresa opera em ambiente próprio e os critérios de retenção são definidos na contratação.' },
+        { q: 'Isso garante que não seremos autuados?', a: 'Não — desconfie de quem garantir. O GRP organiza e documenta o processo e gera os insumos para o GRO/PGR; a conformidade depende das medidas adotadas e da avaliação do responsável técnico.' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

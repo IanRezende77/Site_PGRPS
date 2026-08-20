@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solicitar demonstração — GRP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./Demonstracao.css">
+<style>
+  /* Mantém legível o CTA do cabeçalho quando esta página é marcada como atual. */
+  header nav a.action-button[aria-current="page"] {
+    color: var(--color-surface) !important;
+  }
+</style>
+<script src="./site.js" defer></script>
+</helmet>
+<dc-import name="Header" hint-size="100%,72px"></dc-import>
+<main class="demonstracao-style-001">
+  <div class="demonstracao-style-002">
+    <h1 class="demonstracao-style-003">Solicitar demonstração</h1>
+    <p class="demonstracao-style-004">Uma conversa de 30 minutos, com o sistema rodando em um ambiente de dados fictícios. Sem compromisso e sem apresentação genérica — mostramos o fluxo que faz sentido para o seu caso.</p>
+
+    <div class="demonstracao-style-005">
+      <div class="demonstracao-style-006">
+        <sc-if value="{{ !enviado }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submeter }}" novalidate="true" class="demonstracao-style-007">
+            <div class="demonstracao-form-intro">
+              <div class="demonstracao-form-title">Conte um pouco sobre você</div>
+              <p class="demonstracao-form-help">Preencha os campos abaixo para prepararmos uma demonstração mais próxima da sua realidade. Campos com <span aria-hidden="true">*</span> são obrigatórios.</p>
+            </div>
+
+            <div class="demonstracao-form-grid">
+              <div class="demonstracao-style-008">
+                <label for="f-nome" class="demonstracao-style-009">Nome completo <span class="demonstracao-required" aria-hidden="true">*</span></label>
+                <input id="f-nome" name="nome" type="text" autocomplete="name" placeholder="Ex.: Maria Silva" required="true" value="{{ campos.nome }}" onChange="{{ setNome }}" class="demonstracao-style-010 {{ erros.nome ? 'is-invalid' : '' }}"/>
+                <sc-if value="{{ erros.nome }}" hint-placeholder-val="{{ false }}"><span class="demonstracao-style-011">Informe seu nome.</span></sc-if>
+              </div>
+
+              <div class="demonstracao-style-008">
+                <label for="f-email" class="demonstracao-style-009">E-mail corporativo <span class="demonstracao-required" aria-hidden="true">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com.br" required="true" value="{{ campos.email }}" onChange="{{ setEmail }}" class="demonstracao-style-010 {{ erros.email ? 'is-invalid' : '' }}"/>
+                <sc-if value="{{ erros.email }}" hint-placeholder-val="{{ false }}"><span class="demonstracao-style-011">Informe um e-mail válido.</span></sc-if>
+              </div>
+
+              <div class="demonstracao-style-008">
+                <label for="f-whats" class="demonstracao-style-009">WhatsApp <span class="demonstracao-required" aria-hidden="true">*</span></label>
+                <input id="f-whats" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="(31) 99999-9999" required="true" value="{{ campos.whatsapp }}" onChange="{{ setWhatsapp }}" class="demonstracao-style-010 {{ erros.whatsapp ? 'is-invalid' : '' }}"/>
+                <sc-if value="{{ erros.whatsapp }}" hint-placeholder-val="{{ false }}"><span class="demonstracao-style-011">Informe um WhatsApp com DDD.</span></sc-if>
+              </div>
+
+              <div class="demonstracao-style-008">
+                <label for="f-empresa" class="demonstracao-style-009">Empresa ou organização <span class="demonstracao-required" aria-hidden="true">*</span></label>
+                <input id="f-empresa" name="empresa" type="text" autocomplete="organization" placeholder="Nome da empresa" required="true" value="{{ campos.empresa }}" onChange="{{ setEmpresa }}" class="demonstracao-style-010 {{ erros.empresa ? 'is-invalid' : '' }}"/>
+                <sc-if value="{{ erros.empresa }}" hint-placeholder-val="{{ false }}"><span class="demonstracao-style-011">Informe o nome da empresa.</span></sc-if>
+              </div>
+
+              <div class="demonstracao-style-008">
+                <label for="f-perfil" class="demonstracao-style-009">Seu perfil <span class="demonstracao-required" aria-hidden="true">*</span></label>
+                <select id="f-perfil" name="perfil" required="true" value="{{ campos.perfil }}" onChange="{{ setPerfil }}" class="demonstracao-style-012 {{ erros.perfil ? 'is-invalid' : '' }}">
+                  <option value="">Selecione seu perfil</option>
+                  <option value="empresa_sst">Empresa — SST / SESMT</option>
+                  <option value="empresa_rh">Empresa — RH / Gestão de Pessoas</option>
+                  <option value="consultoria">Consultoria de SST</option>
+                  <option value="clinica">Clínica ocupacional</option>
+                  <option value="profissional">Profissional autônomo de SST / Psicologia / Ergonomia</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <sc-if value="{{ erros.perfil }}" hint-placeholder-val="{{ false }}"><span class="demonstracao-style-011">Selecione seu perfil.</span></sc-if>
+              </div>
+
+              <div class="demonstracao-style-008">
+                <label for="f-porte" class="demonstracao-style-009">Porte aproximado <span class="demonstracao-required" aria-hidden="true">*</span></label>
+                <select id="f-porte" name="porte" required="true" value="{{ campos.porte }}" onChange="{{ setPorte }}" class="demonstracao-style-012 {{ erros.porte ? 'is-invalid' : '' }}">
+                  <option value="">Selecione o porte</option>
+                  <option value="ate19">Até 19 trabalhadores</option>
+                  <option value="20a99">20 a 99 trabalhadores</option>
+                  <option value="100a499">100 a 499 trabalhadores</option>
+                  <option value="500a999">500 a 999 trabalhadores</option>
+                  <option value="1000mais">1.000 ou mais trabalhadores</option>
+                  <option value="consultoria_multicliente">Consultoria / clínica com vários clientes</option>
+                </select>
+                <sc-if value="{{ erros.porte }}" hint-placeholder-val="{{ false }}"><span class="demonstracao-style-011">Selecione o porte aproximado.</span></sc-if>
+              </div>
+            </div>
+
+            <div class="demonstracao-form-divider" aria-hidden="true"></div>
+
+            <div class="demonstracao-style-008">
+              <label for="f-situacao" class="demonstracao-style-009">Em que situação vocês estão hoje? <span class="demonstracao-required" aria-hidden="true">*</span></label>
+              <select id="f-situacao" name="situacao" required="true" value="{{ campos.situacao }}" onChange="{{ setSituacao }}" class="demonstracao-style-012 {{ erros.situacao ? 'is-invalid' : '' }}">
+                <option value="">Selecione a situação atual</option>
+                <option value="nao_iniciamos">Ainda não iniciamos a avaliação de riscos psicossociais</option>
+                <option value="estruturando">Estamos estruturando o processo agora</option>
+                <option value="questionario">Já aplicamos questionários e queremos evoluir o processo</option>
+                <option value="processo_existente">Já temos um processo e queremos organizar / automatizar</option>
+                <option value="comparando">Estamos comparando soluções e fornecedores</option>
+              </select>
+              <sc-if value="{{ erros.situacao }}" hint-placeholder-val="{{ false }}"><span class="demonstracao-style-011">Selecione a situação atual.</span></sc-if>
+            </div>
+
+            <div class="demonstracao-form-grid demonstracao-form-grid-bottom">
+              <div class="demonstracao-style-008">
+                <label for="f-interesse" class="demonstracao-style-009">Principal interesse na demonstração <span class="demonstracao-required" aria-hidden="true">*</span></label>
+                <select id="f-interesse" name="interesse" required="true" value="{{ campos.interesse }}" onChange="{{ setInteresse }}" class="demonstracao-style-012 {{ erros.interesse ? 'is-invalid' : '' }}">
+                  <option value="">Selecione o principal interesse</option>
+                  <option value="ciclo_completo">Conhecer o ciclo completo do GRP</option>
+                  <option value="campanhas">Campanhas, questionários e participação</option>
+                  <option value="anonimato">Anonimato, confidencialidade e proteção de dados</option>
+                  <option value="resultados">Resultados, dashboards e análise coletiva</option>
+                  <option value="inventario_plano">Inventário de riscos e plano de ação</option>
+                  <option value="multiempresa">Gestão de vários clientes / multiempresa</option>
+                </select>
+                <sc-if value="{{ erros.interesse }}" hint-placeholder-val="{{ false }}"><span class="demonstracao-style-011">Selecione o principal interesse.</span></sc-if>
+              </div>
+
+              <div class="demonstracao-style-008">
+                <label for="f-contato" class="demonstracao-style-009">Como prefere receber nosso retorno? <span class="demonstracao-required" aria-hidden="true">*</span></label>
+                <select id="f-contato" name="contato" required="true" value="{{ campos.contato }}" onChange="{{ setContato }}" class="demonstracao-style-012 {{ erros.contato ? 'is-invalid' : '' }}">
+                  <option value="">Selecione uma opção</option>
+                  <option value="whatsapp">WhatsApp</option>
+                  <option value="email">E-mail</option>
+                  <option value="qualquer">Tanto faz</option>
+                </select>
+                <sc-if value="{{ erros.contato }}" hint-placeholder-val="{{ false }}"><span class="demonstracao-style-011">Selecione uma preferência de contato.</span></sc-if>
+              </div>
+            </div>
+
+            <div class="demonstracao-style-008">
+              <label for="f-mensagem" class="demonstracao-style-009">Algo específico que você quer ver? <span class="demonstracao-optional">Opcional</span></label>
+              <textarea id="f-mensagem" name="mensagem" rows="4" maxlength="700" placeholder="Ex.: queremos ver como o sistema funciona para várias unidades e como é gerado o plano de ação." value="{{ campos.mensagem }}" onChange="{{ setMensagem }}" class="demonstracao-style-010 demonstracao-textarea"></textarea>
+              <span class="demonstracao-field-hint">Não inclua dados pessoais de trabalhadores neste campo.</span>
+            </div>
+
+            <div class="demonstracao-submit-area">
+              <button type="submit" class="demonstracao-style-013 action-button">Solicitar demonstração</button>
+              <p class="demonstracao-style-014">Usaremos estes dados somente para responder à sua solicitação de demonstração.</p>
+            </div>
+          </form>
+        </sc-if>
+        <sc-if value="{{ enviado }}" hint-placeholder-val="{{ false }}">
+          <div class="demonstracao-style-015">
+            <div class="demonstracao-style-016">Recebemos sua solicitação.</div>
+            <p class="demonstracao-style-017">Retornamos em até um dia útil no e-mail e no WhatsApp informados.</p>
+          </div>
+        </sc-if>
+      </div>
+
+      <div class="demonstracao-style-018">
+        <div class="demonstracao-style-019 surface-card">
+          <div class="demonstracao-style-020">O que acontece depois</div>
+          <ol class="demonstracao-style-021">
+            <li class="demonstracao-style-022">Retornamos em até 1 dia útil.</li>
+            <li class="demonstracao-style-022">Conversa de 30 minutos para entender o cenário.</li>
+            <li class="demonstracao-style-022">Demonstração no ambiente com dados fictícios.</li>
+            <li class="demonstracao-style-022">Proposta em até 2 dias úteis, se fizer sentido.</li>
+          </ol>
+        </div>
+        <div class="demonstracao-style-023 surface-card">
+          <div class="demonstracao-style-020">Prefere conversar direto?</div>
+          <div class="demonstracao-style-024">
+            <a href="{{ whatsappUrl }}" class="demonstracao-style-025">Falar no WhatsApp</a>
+            <span class="demonstracao-style-026">Telefone: [A DEFINIR]</span>
+            <span class="demonstracao-style-026">E-mail: [A DEFINIR]</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="demonstracao-style-027">
+  <div class="demonstracao-style-028">
+    <div>
+      <div class="demonstracao-style-029">GRP</div>
+      <p class="demonstracao-style-030">Gestão de Riscos Psicossociais</p>
+    </div>
+    <div>
+      <div class="demonstracao-style-031">Produto</div>
+      <div class="demonstracao-style-032">
+        <a href="index.html#como-funciona" class="demonstracao-style-033">Como funciona</a>
+        <a href="Confidencialidade.dc.html" class="demonstracao-style-033">Confidencialidade</a>
+        <a href="Demonstracao.dc.html" class="demonstracao-style-033">Solicitar demonstração</a>
+      </div>
+    </div>
+    <div>
+      <div class="demonstracao-style-031">Legal</div>
+      <div class="demonstracao-style-032">
+        <a href="legal/Privacidade.dc.html" class="demonstracao-style-033">Política de Privacidade</a>
+        <a href="legal/Termos.dc.html" class="demonstracao-style-033">Termos de Uso</a>
+      </div>
+    </div>
+    <div>
+      <div class="demonstracao-style-031">Contato</div>
+      <div class="demonstracao-style-034">
+        <a href="#" class="demonstracao-style-035">Falar no WhatsApp</a>
+        <span class="demonstracao-style-026">CNPJ: [A DEFINIR]</span>
+        <span class="demonstracao-style-026">Endereço: [A DEFINIR]</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    campos: { nome: '', email: '', whatsapp: '', empresa: '', perfil: '', porte: '', situacao: '', interesse: '', contato: '', mensagem: '' },
+    erros: {},
+    enviado: false,
+  };
+
+  formatWhatsapp(v) {
+    const d = v.replace(/\D/g, '').slice(0, 11);
+    if (d.length <= 2) return d;
+    if (d.length <= 7) return '(' + d.slice(0, 2) + ') ' + d.slice(2);
+    return '(' + d.slice(0, 2) + ') ' + d.slice(2, 7) + '-' + d.slice(7);
+  }
+
+  renderVals() {
+    const setCampo = (nome) => (e) => this.setState(s => ({
+      campos: { ...s.campos, [nome]: e.target.value },
+      erros: { ...s.erros, [nome]: false },
+    }));
+
+    return {
+      whatsappUrl: 'https://wa.me/[NUMERO]?text=' + encodeURIComponent('Olá, vim pelo site do GRP e quero uma demonstração.'),
+      campos: this.state.campos,
+      erros: this.state.erros,
+      enviado: this.state.enviado,
+      setNome: setCampo('nome'),
+      setEmail: setCampo('email'),
+      setEmpresa: setCampo('empresa'),
+      setPerfil: setCampo('perfil'),
+      setPorte: setCampo('porte'),
+      setSituacao: setCampo('situacao'),
+      setInteresse: setCampo('interesse'),
+      setContato: setCampo('contato'),
+      setMensagem: setCampo('mensagem'),
+      setWhatsapp: (e) => this.setState(s => ({
+        campos: { ...s.campos, whatsapp: this.formatWhatsapp(e.target.value) },
+        erros: { ...s.erros, whatsapp: false },
+      })),
+      submeter: (e) => {
+        e.preventDefault();
+        const c = this.state.campos;
+        const erros = {};
+        if (!c.nome.trim()) erros.nome = true;
+        if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(c.email.trim())) erros.email = true;
+        if (c.whatsapp.replace(/\D/g, '').length < 10) erros.whatsapp = true;
+        if (!c.empresa.trim()) erros.empresa = true;
+        if (!c.perfil) erros.perfil = true;
+        if (!c.porte) erros.porte = true;
+        if (!c.situacao) erros.situacao = true;
+        if (!c.interesse) erros.interesse = true;
+        if (!c.contato) erros.contato = true;
+        this.setState({ erros });
+        if (Object.keys(erros).length === 0) this.setState({ enviado: true });
+      },
+    };
+  }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GRP — Gestão de Riscos Psicossociais para o GRO/PGR</title>
+<meta name="description" content="Campanhas de avaliação psicossocial, análise coletiva, inventário de riscos e plano de ação com evidências documentadas. Para empresas e consultorias de SST. Solicite uma demonstração.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="./site.js" defer></script>
+</helmet>
+<dc-import name="Header" hint-size="100%,72px"></dc-import>
+<main class="home-style-001">
+
+<section id="o-grp" data-screen-label="Abertura" class="home-style-002">
+  <div class="home-style-003">
+    <div class="home-style-004">
+      <div class="home-style-005">
+        <div class="home-style-006">
+          <span aria-hidden="true" class="home-style-007"></span>
+          <span class="home-style-008">NR-1 · NR-17 · GRO / PGR</span>
+        </div>
+        <h1 class="home-style-009">Anonimato garantido. Segurança para responder. <span class="home-style-010">Confiança para evoluir.</span></h1>
+        <p class="home-style-011">Avaliação de riscos psicossociais alinhada à NR-1 e à NR-17, com proteção da identidade dos participantes em todas as etapas. O GRP organiza campanhas de avaliação, análise dos resultados, planos de ação e acompanhamento das medidas em um processo documentado, para empresas e consultorias de saúde e segurança do trabalho.</p>
+        <div class="home-style-012">
+          <a href="Demonstracao.dc.html" class="home-style-013">Solicitar demonstração</a>
+          <a href="#como-funciona" class="home-style-014">Ver como funciona</a>
+        </div>
+      </div>
+      <div class="home-style-015">
+        <dc-import name="PlaceholderScreenshot" label="Painel de resultados coletivos da campanha" slot-id="shot-hero" hint-size="100%,100%" class="home-style-016"></dc-import>
+      </div>
+    </div>
+
+    <div class="home-style-017">
+      <sc-for list="{{ garantias }}" as="g" hint-placeholder-count="4">
+        <div class="home-style-018">{{ g }}</div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Bifurcação de perfil" class="home-style-019">
+  <div class="home-style-020">
+    <div class="home-style-021 surface-card">
+      <h3 class="home-style-022">Sou consultoria ou clínica de SST</h3>
+      <p class="home-style-023">Preciso entregar avaliação psicossocial para vários clientes sem refazer o processo em cada um.</p>
+      <a href="ParaConsultorias.dc.html" class="home-style-024">Ver como funciona para consultorias →</a>
+    </div>
+    <div class="home-style-021 surface-card">
+      <h3 class="home-style-022">Sou a empresa</h3>
+      <p class="home-style-023">Preciso organizar, documentar e acompanhar o processo psicossocial na minha operação.</p>
+      <a href="ParaEmpresas.dc.html" class="home-style-024">Ver como funciona para empresas →</a>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="O problema" class="home-style-025">
+  <div class="home-style-003">
+    <h2 class="home-style-026">Diagnóstico feito. E a evidência?</h2>
+    <p class="home-style-027">Desde 26 de maio de 2026 a fiscalização da NR-1 deixou de ser orientativa. O que se cobra não é o questionário — é o processo que veio depois dele.</p>
+    <div class="home-style-028">
+      <sc-for list="{{ problemas }}" as="p" hint-placeholder-count="4">
+        <div class="home-style-029">
+          <div class="home-style-031">{{ p.titulo }}</div>
+          <div class="home-style-032">{{ p.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona" data-screen-label="Como funciona" class="home-style-019">
+  <div class="home-style-003">
+    <h2 class="home-style-033">Do levantamento ao acompanhamento, em um só lugar.</h2>
+    <div class="home-style-034">
+      <sc-for list="{{ etapas }}" as="e" hint-placeholder-count="4">
+        <div class="home-style-035 surface-card">
+          <div class="home-style-036">{{ e.n }}</div>
+          <div class="home-style-037">{{ e.titulo }}</div>
+          <div class="home-style-032">{{ e.desc }}</div>
+          <div class="home-style-038">
+            <dc-import name="PlaceholderScreenshot" label="{{ e.shot }}" slot-id="{{ e.slotId }}" hint-size="100%,100%" class="home-style-016"></dc-import>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div class="home-style-039">
+      <a href="ComoFunciona.dc.html" class="home-style-024">Ver o processo completo →</a>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Os três pilares" class="home-style-025">
+  <div class="home-style-003">
+    <h2 class="home-style-040">Três coisas que decidem se a avaliação vale alguma coisa.</h2>
+    <div class="home-style-041">
+      <sc-for list="{{ pilares }}" as="pl" hint-placeholder-count="3">
+        <div class="pillar-layout {{ pl.dir }}">
+          <div class="home-style-042">
+            <h3 class="home-style-043">{{ pl.titulo }}</h3>
+            <p class="home-style-044">{{ pl.texto }}</p>
+          </div>
+          <div class="home-style-015">
+            <dc-import name="PlaceholderScreenshot" label="{{ pl.shot }}" slot-id="{{ pl.slotId }}" hint-size="100%,100%" class="home-style-016"></dc-import>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Mais que um questionário" class="home-style-045">
+  <div class="home-style-003">
+    <h2 class="home-style-033">Mais que um questionário</h2>
+    <div class="home-style-046">
+      <sc-for list="{{ maisQue }}" as="m" hint-placeholder-count="3">
+        <div class="home-style-047 surface-card">
+          <div class="home-style-037">{{ m.titulo }}</div>
+          <div class="home-style-032">{{ m.desc }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Comparativo" class="home-style-019">
+  <div class="home-style-003">
+    <h2 class="home-style-033">Planilha resolve uma vez. Processo resolve todo ano.</h2>
+
+    <sc-if value="{{ !isMobile }}" hint-placeholder-val="{{ true }}">
+      <table class="home-style-049">
+        <thead>
+          <tr>
+            <th class="home-style-050"></th>
+            <th class="home-style-050">Planilha e PDF avulso</th>
+            <th class="home-style-051">Com o GRP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{ comparativo }}" as="row" hint-placeholder-count="4">
+            <tr>
+              <td class="home-style-052">{{ row.k }}</td>
+              <td class="home-style-053">{{ row.antes }}</td>
+              <td class="home-style-054">{{ row.depois }}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <div class="home-style-055">
+        <sc-for list="{{ comparativo }}" as="row" hint-placeholder-count="4">
+          <div class="home-style-056 surface-card">
+            <div class="home-style-057">{{ row.k }}</div>
+            <div class="home-style-058">
+              <span class="home-style-059">Planilha e PDF avulso</span>
+              <span class="home-style-060">{{ row.antes }}</span>
+            </div>
+            <div class="home-style-061">
+              <span class="home-style-062">Com o GRP</span>
+              <span class="home-style-063">{{ row.depois }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<section data-screen-label="Para quem é" class="home-style-025">
+  <div class="home-style-064">
+    <div id="para-empresas" class="home-style-065">
+      <h2 class="home-style-066">Para empresas</h2>
+      <p class="home-style-067">Organizar a campanha, enxergar os riscos de forma consolidada, registrar as decisões e acompanhar as melhorias ao longo do tempo — com histórico de todas as avaliações.</p>
+      <a href="ParaEmpresas.dc.html" class="home-style-024">Ver a página para empresas →</a>
+    </div>
+    <div id="para-consultorias" class="home-style-065">
+      <h2 class="home-style-066">Para consultorias e clínicas de SST</h2>
+      <p class="home-style-067">Conduzir campanhas de vários clientes em ambientes separados, com equipe, permissões e documentos padronizados — e transformar uma entrega pontual em acompanhamento contínuo.</p>
+      <a href="ParaConsultorias.dc.html" class="home-style-024">Ver a página para consultorias →</a>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Programa Piloto" class="home-style-019">
+  <div class="home-style-068">
+    <h2 class="home-style-069">Programa Piloto</h2>
+    <p class="home-style-070">O GRP está em fase de implantação assistida com um número limitado de organizações. Quem entra agora recebe acompanhamento direto da equipe de produto em todo o primeiro ciclo, condição especial de lançamento e influência sobre as prioridades do roadmap.</p>
+    <a href="Demonstracao.dc.html" class="home-style-013">Quero participar do piloto</a>
+  </div>
+</section>
+
+<section id="duvidas" data-screen-label="Dúvidas frequentes" class="home-style-025">
+  <div class="home-style-071">
+    <h2 class="home-style-072">Dúvidas frequentes</h2>
+    <dc-import name="FAQAccordion" items="{{ faq }}" hint-size="100%,600px"></dc-import>
+  </div>
+</section>
+
+<section data-screen-label="CTA final" class="home-style-073">
+  <div class="home-style-074">
+    <h2 class="home-style-075">Transforme informações dispersas em um processo organizado, documentado e tecnicamente validável.</h2>
+    <div class="home-style-076">
+      <a href="Demonstracao.dc.html" class="home-style-013">Solicitar demonstração</a>
+      <a href="{{ whatsappUrl }}" class="home-style-077">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="home-style-078">
+  <div class="home-style-079">
+    <div>
+      <div class="home-style-080">GRP</div>
+      <p class="home-style-081">Gestão de Riscos Psicossociais</p>
+    </div>
+    <div>
+      <div class="home-style-082">Produto</div>
+      <div class="home-style-083">
+        <a href="#como-funciona" class="home-style-084">Como funciona</a>
+        <a href="Confidencialidade.dc.html" class="home-style-084">Confidencialidade</a>
+        <a href="Demonstracao.dc.html" class="home-style-084">Solicitar demonstração</a>
+      </div>
+    </div>
+    <div>
+      <div class="home-style-082">Legal</div>
+      <div class="home-style-083">
+        <a href="legal/Privacidade.dc.html" class="home-style-084">Política de Privacidade</a>
+        <a href="legal/Termos.dc.html" class="home-style-084">Termos de Uso</a>
+      </div>
+    </div>
+    <div>
+      <div class="home-style-082">Contato</div>
+      <div class="home-style-085">
+        <a href="#" class="home-style-086">Falar no WhatsApp</a>
+        <span class="home-style-087">CNPJ: [A DEFINIR]</span>
+        <span class="home-style-087">Endereço: [A DEFINIR]</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { isMobile: typeof window !== 'undefined' && window.innerWidth <= 760 };
+
+  componentDidMount() {
+    this._onResize = () => {
+      const m = window.innerWidth <= 760;
+      if (m !== this.state.isMobile) this.setState({ isMobile: m });
+    };
+    window.addEventListener('resize', this._onResize);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this._onResize);
+  }
+
+  renderVals() {
+    return {
+      isMobile: this.state.isMobile,
+      whatsappUrl: 'https://wa.me/[NUMERO]?text=' + encodeURIComponent('Olá, vim pelo site do GRP e quero uma demonstração.'),
+      garantias: [
+        'Sem cadastro nominal dos respondentes',
+        'Resultados apresentados de forma coletiva',
+        'Ambientes separados por empresa',
+        'Decisão técnica registrada',
+      ],
+      problemas: [
+        { titulo: 'O relatório parou no PDF.', desc: 'A avaliação foi feita, o arquivo foi arquivado e nada foi para o inventário de riscos.' },
+        { titulo: 'A medida foi tomada, mas não registrada.', desc: 'Não há quem decidiu, quando, com que prazo, nem comprovação de que foi executada.' },
+        { titulo: 'Não há como comparar.', desc: 'Sem o ciclo anterior estruturado, não se demonstra se a medida funcionou.' },
+        { titulo: 'A informação está espalhada.', desc: 'Planilha, e-mail, formulário e documento solto, cada um com uma versão diferente.' },
+      ],
+      etapas: [
+        { n: '1', titulo: 'Estruturar', desc: 'Cadastre a empresa, as unidades, os setores e os grupos de análise. É a base que garante resultado útil e proteção dos participantes.', shot: 'Cadastro de unidades e grupos de análise', slotId: 'shot-etapa-1' },
+        { n: '2', titulo: 'Coletar', desc: 'Distribua o acesso por QR Code, link ou código. O trabalhador responde sem login, sem cadastro e sem instalar nada.', shot: 'Distribuição por QR Code e link', slotId: 'shot-etapa-2' },
+        { n: '3', titulo: 'Analisar', desc: 'Os resultados são consolidados de forma coletiva e submetidos à avaliação do profissional responsável.', shot: 'Consolidação de resultados coletivos', slotId: 'shot-etapa-3' },
+        { n: '4', titulo: 'Agir e acompanhar', desc: 'Inventário, plano de ação com responsável e prazo, evidências anexadas e comparação com o ciclo seguinte.', shot: 'Plano de ação com responsáveis e prazos', slotId: 'shot-etapa-4' },
+      ],
+      pilares: [
+        { titulo: 'Processo, não pesquisa', texto: 'Aplicar o questionário é uma etapa. O que sustenta o gerenciamento é o que vem depois: inventário de riscos, plano de ação com responsável e prazo, evidência do que foi executado e reavaliação no ciclo seguinte. O GRP foi construído em torno dessa sequência inteira.', shot: 'Inventário de riscos e plano de ação com responsáveis e prazos', slotId: 'shot-pilar-1', dir: 'row' },
+        { titulo: 'Confidencialidade construída no sistema', texto: 'Não há cadastro nominal dos respondentes. O acesso é feito por código, e os resultados são apresentados de forma coletiva. Grupos pequenos demais não geram resultado separado, justamente para que ninguém seja identificado por eliminação.', shot: 'Tela do respondente — acesso por código, sem login', slotId: 'shot-pilar-2', dir: 'row-reverse' },
+        { titulo: 'A decisão continua sendo do profissional', texto: 'O sistema organiza os dados, calcula os indicadores e monta os documentos. A classificação do risco, o inventário e o plano de ação passam por assinatura eletrônica do responsável técnico — e, uma vez aprovada, a base fica bloqueada, com registro de quem assinou e quando.', shot: 'Assinatura eletrônica do responsável técnico e base bloqueada', slotId: 'shot-pilar-3', dir: 'row' },
+      ],
+      maisQue: [
+        { titulo: 'Camada qualitativa', desc: 'Registre entrevistas, observações de campo e documentos como evidência, ligados a cada risco. O que a NR-1 pede não cabe só num formulário.' },
+        { titulo: 'Inventário estruturado', desc: 'Os achados viram perigos, grupos expostos, controles, severidade e probabilidade — prontos para o AEP, o GRO e o PGR.' },
+        { titulo: 'Ciclo de eficácia', desc: 'Cada ação tem baseline, evidência, revisão e reavaliação. O próximo ciclo mostra, com número, se a medida funcionou.' },
+      ],
+      comparativo: [
+        { k: 'A cada novo ciclo', antes: 'Refaz tudo do zero', depois: 'Reaproveita a estrutura e compara com o anterior' },
+        { k: 'Quem aprovou o quê', antes: 'Depende da memória de alguém', depois: 'Registrado com autor e data' },
+        { k: 'Evidência da ação', antes: 'Solta em e-mail e pasta de rede', depois: 'Anexada à ação correspondente' },
+        { k: 'Vários clientes ou unidades', antes: 'Uma pasta por cliente', depois: 'Ambientes separados no mesmo painel' },
+      ],
+      faq: [
+        { q: 'O que são riscos psicossociais?', a: 'São fatores ligados à organização do trabalho — carga, ritmo, autonomia, clareza de papéis, relações e condutas no ambiente — capazes de afetar a saúde do trabalhador. A NR-1 passou a exigir que sejam identificados, avaliados e gerenciados junto com os demais riscos ocupacionais.' },
+        { q: 'O GRP garante conformidade com a NR-1?', a: 'Não — a utilização do sistema não garante, por si só, conformidade integral. O GRP organiza e documenta o processo e gera os insumos para o GRO/PGR; a conformidade depende das medidas adotadas e da avaliação do responsável técnico.' },
+        { q: 'Qual é o tamanho mínimo de grupo?', a: 'Dez participantes. Abaixo disso, os dados são agregados em um nível acima da estrutura, para que ninguém seja identificado por eliminação.' },
+        { q: 'Como é feita a coleta?', a: 'De dois modos, a critério da campanha: analógico, por documento impresso com código e QR Code distribuído em urna sob supervisão da representação da NR-5; ou digital, por link ou código individual sem cadastro. Em ambos, sem login e sem identificação pessoal.' },
+        { q: 'O que o GRP não faz?', a: 'Não faz diagnóstico clínico ou psicológico individual, não gera ranking ou perfil de trabalhador, não guarda cadastro nominal dos respondentes e não substitui o responsável técnico.' },
+        { q: 'A empresa consegue ver quem respondeu o quê?', a: 'Não. Não existe cadastro nominal de respondentes e os resultados são apresentados de forma coletiva. A plataforma não foi construída para devolver resposta individual.' },
+        { q: 'O que acontece quando o grupo é muito pequeno?', a: 'Grupos abaixo do tamanho mínimo definido não geram resultado separado — os dados são agregados em um nível acima da estrutura. É o que impede que alguém seja identificado por eliminação em uma equipe de poucas pessoas.' },
+        { q: 'Como os trabalhadores acessam o questionário?', a: 'Por QR Code, link ou código de campanha. Não há login, não há cadastro e não é preciso instalar nenhum programa. Funciona no navegador do celular.' },
+        { q: 'O sistema substitui o responsável técnico?', a: 'Não. O GRP organiza os dados e monta os documentos; a classificação do risco e a aprovação final permanecem com o profissional habilitado, que fica registrado no sistema.' },
+        { q: 'O GRP gera relatórios e plano de ação?', a: 'Sim: relatório coletivo, inventário de riscos psicossociais, plano de ação com responsáveis e prazos, e o histórico de evidências e acompanhamento de cada campanha.' },
+        { q: 'Como solicito uma demonstração?', a: 'Pelo formulário desta página. A equipe retorna em até um dia útil e a demonstração é feita em um ambiente com dados fictícios, sem compromisso.' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>

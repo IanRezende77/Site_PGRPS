@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./vendor/react.production.min.js"></script>
+<script src="./vendor/react-dom.production.min.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Produtos do GRP — modalidades de contratação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./Produtos.css">
+<script src="./site.js" defer></script>
+</helmet>
+<dc-import name="Header" hint-size="100%,72px"></dc-import>
+<main class="produtos-style-001">
+
+<section class="produtos-style-002">
+  <div class="produtos-style-003">
+    <div class="produtos-style-004">Produtos</div>
+    <h1 class="produtos-style-005">Quatro formas de usar o GRP — você escolhe quanto entregamos prontos.</h1>
+    <p class="produtos-style-006">Do uso da plataforma por conta da sua própria equipe técnica até a entrega do inventário e do plano de ação assinados com ART, o GRP se ajusta ao papel que você quer que a gente cumpra.</p>
+  </div>
+</section>
+
+<section class="produtos-style-007">
+  <div class="produtos-style-008">
+    <sc-for list="{{ modalidades }}" as="m" hint-placeholder-count="4">
+      <div class="produtos-style-009 surface-card">
+        <div class="produtos-style-010">
+          <div class="produtos-style-011">{{ m.n }}</div>
+          <div class="produtos-style-012">{{ m.titulo }}</div>
+        </div>
+        <p class="produtos-style-013">{{ m.texto }}</p>
+        <div class="produtos-style-014"><strong class="produtos-style-015">Para quem é:</strong> {{ m.paraQuem }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section class="produtos-style-016">
+  <div class="produtos-style-003">
+    <p class="produtos-style-017">As quatro modalidades não são excludentes — muitas empresas começam na 1 ou na 2 e migram para a 3 quando precisam de ART, ou contratam a 4 isoladamente para dar continuidade a um PGR-PS que já têm.</p>
+  </div>
+</section>
+
+<section class="produtos-style-018">
+  <div class="produtos-style-003">
+    <h2 class="produtos-style-019">Dúvidas frequentes</h2>
+    <dc-import name="FAQAccordion" items="{{ faq }}" hint-size="100%,300px"></dc-import>
+  </div>
+</section>
+
+<section class="produtos-style-020">
+  <div class="produtos-style-021">
+    <h2 class="produtos-style-022">Transforme informações dispersas em um processo organizado, documentado e tecnicamente validável.</h2>
+    <div class="produtos-style-023">
+      <a href="Demonstracao.dc.html" class="produtos-style-024 action-button">Solicitar demonstração</a>
+      <a href="{{ whatsappUrl }}" class="produtos-style-025">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="produtos-style-026">
+  <div class="produtos-style-027">
+    <div>
+      <div class="produtos-style-028">GRP</div>
+      <p class="produtos-style-029">Gestão de Riscos Psicossociais</p>
+    </div>
+    <div>
+      <div class="produtos-style-030">Produto</div>
+      <div class="produtos-style-031">
+        <a href="ComoFunciona.dc.html" class="produtos-style-032">Como funciona</a>
+        <a href="Produtos.dc.html" class="produtos-style-032">Produtos</a>
+        <a href="Confidencialidade.dc.html" class="produtos-style-032">Confidencialidade</a>
+        <a href="Demonstracao.dc.html" class="produtos-style-032">Solicitar demonstração</a>
+      </div>
+    </div>
+    <div>
+      <div class="produtos-style-030">Legal</div>
+      <div class="produtos-style-031">
+        <a href="legal/Privacidade.dc.html" class="produtos-style-032">Política de Privacidade</a>
+        <a href="legal/Termos.dc.html" class="produtos-style-032">Termos de Uso</a>
+      </div>
+    </div>
+    <div>
+      <div class="produtos-style-030">Contato</div>
+      <div class="produtos-style-033">
+        <a href="{{ whatsappUrl }}" class="produtos-style-034">Falar no WhatsApp</a>
+        <span class="produtos-style-035">CNPJ: [A DEFINIR]</span>
+        <span class="produtos-style-035">Endereço: [A DEFINIR]</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      whatsappUrl: 'https://wa.me/[NUMERO]?text=' + encodeURIComponent('Olá, vim pelo site do GRP e quero uma demonstração.'),
+      modalidades: [
+        { n: '1', titulo: 'Plataforma para aplicação', texto: 'Você usa o GRP para estruturar a campanha, distribuir o acesso e coletar as respostas de forma anônima. Os cálculos e os relatórios são feitos fora do sistema, pelo responsável técnico definido por você.', paraQuem: 'empresas e consultorias que já têm um processo de cálculo e análise próprio e querem só a camada de coleta protegida.' },
+        { n: '2', titulo: 'Plataforma com cálculo e relatório', texto: 'Além da aplicação, o GRP calcula os resultados e gera os relatórios dentro do sistema — mas a análise, a classificação de risco e a aprovação continuam sendo do responsável técnico definido por você.', paraQuem: 'empresas e consultorias que querem reduzir o retrabalho de tabulação, mantendo a responsabilidade técnica com o profissional que já atende o cliente.' },
+        { n: '3', titulo: 'Entrega completa com ART do GRP', texto: 'O GRP conduz o processo inteiro e entrega o PGR-PS — Inventário de Riscos Psicossociais e Plano de Ação — assinado pelo responsável técnico do GRP, com ART registrada no CREA.', paraQuem: 'empresas que não têm um profissional próprio para essa avaliação e querem o processo entregue de ponta a ponta, já com respaldo técnico e registro profissional.' },
+        { n: '4', titulo: 'Acompanhamento do plano de ação', texto: 'Depois que o PGR-PS existe — emitido pelo seu responsável técnico ou pelo do GRP — o GRP acompanha a execução: prazos, responsáveis, evidências anexadas e a comparação de eficácia no ciclo seguinte.', paraQuem: 'quem já tem o inventário e o plano prontos (por qualquer uma das vias acima) e precisa de um lugar para provar que as ações foram executadas.' },
+      ],
+      faq: [
+        { q: 'Preciso trocar de modalidade se eu crescer?', a: 'Não. Você pode migrar de uma modalidade para outra a qualquer momento, mantendo o histórico das campanhas anteriores.' },
+        { q: 'A modalidade 3 substitui minha consultoria de SST atual?', a: 'Não necessariamente — várias consultorias usam a modalidade 1 ou 2 para continuar sendo a responsável técnica dos próprios clientes. A modalidade 3 é para quem não tem esse profissional disponível.' },
+        { q: 'Como sei quanto custa cada modalidade?', a: 'Fale com a gente pelo formulário de demonstração — o valor depende do porte e da modalidade escolhida. [A DEFINIR — depende da decisão de preço, Bloco 1]' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>
