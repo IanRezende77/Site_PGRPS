@@ -20,26 +20,155 @@
 <script src="../site.js" defer></script>
 </helmet>
 <dc-import name="Header" from="../Header.dc.html" logo-src="../assets/grp-symbol.png" hint-size="100%,72px"></dc-import>
+
+<!--
+  IMPORTANTE ANTES DA PUBLICAÇÃO:
+  1) preencher CNPJ, endereço e canais oficiais no rodapé;
+  2) divulgar a identidade e o contato do encarregado, quando aplicável;
+  3) alinhar esta política aos fornecedores efetivamente utilizados (hospedagem, e-mail, analytics etc.);
+  4) validar a versão final com o jurídico/privacidade da pessoa jurídica responsável pelo GRP.
+
+  Referências consideradas na redação:
+  - Lei nº 13.709/2018 (LGPD), texto vigente;
+  - Lei nº 12.965/2014 (Marco Civil da Internet);
+  - Decreto nº 8.771/2016;
+  - orientações da ANPD sobre direitos dos titulares, agentes de tratamento, encarregado, cookies e incidentes;
+  - documentação oficial GRP v2.1, de 12/08/2026.
+-->
+
 <main class="privacidade-style-001">
   <div class="privacidade-style-002">
     <nav aria-label="Sumário" class="privacidade-style-003">
-      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="8">
+      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="12">
         <a href="{{ s.href }}" class="privacidade-style-004">{{ s.label }}</a>
       </sc-for>
     </nav>
+
     <article class="privacidade-style-005">
       <h1 class="privacidade-style-006">Política de Privacidade</h1>
-      <p class="privacidade-style-007">Última atualização: [A DEFINIR]</p>
-      <div class="privacidade-style-008 surface-card">Conteúdo jurídico pendente de revisão pelo time legal. Esta página traz apenas a estrutura de seções aprovada.</div>
-      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="8">
-        <section id="{{ s.id }}" class="privacidade-style-009">
-          <h2 class="privacidade-style-010">{{ s.label }}</h2>
-          <div class="privacidade-style-011">[Conteúdo jurídico pendente]</div>
-        </section>
-      </sc-for>
+      <p class="privacidade-style-007">Última atualização: 21 de agosto de 2026</p>
+
+      <div class="privacidade-style-008 surface-card">
+        Esta Política explica como o GRP trata dados pessoais em seu site e na plataforma de Gestão de Riscos Psicossociais Relacionados ao Trabalho. O GRP adota privacidade por concepção, minimização de dados e análise coletiva, sem utilizar a plataforma para diagnóstico individual, ranking de trabalhadores ou identificação de respostas anônimas.
+      </div>
+
+      <section id="introducao" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Introdução e abrangência</h2>
+        <div class="privacidade-style-011">
+          <p>Esta Política aplica-se ao site institucional, aos formulários de contato e demonstração, às contas administrativas e técnicas da plataforma e, no que for aplicável, às operações de tratamento realizadas durante campanhas de avaliação de riscos psicossociais relacionados ao trabalho.</p>
+          <p>O GRP é uma plataforma SaaS de apoio à gestão de riscos psicossociais. Seu uso não substitui a atuação da empresa empregadora, do responsável técnico, dos profissionais de SST, da participação dos trabalhadores ou das análises profissionais exigidas pela legislação aplicável.</p>
+          <p>Dados efetivamente anonimizados, quando não puderem ser relacionados a uma pessoa natural por meios técnicos razoáveis e disponíveis, não são tratados como dados pessoais para os fins da LGPD, sem prejuízo da manutenção das salvaguardas de anonimato do GRP.</p>
+        </div>
+      </section>
+
+      <section id="agentes-de-tratamento" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Papéis e agentes de tratamento</h2>
+        <div class="privacidade-style-011">
+          <p>Os papéis de controlador e operador dependem da operação concreta. Para dados do site, solicitações comerciais, cadastro de usuários, segurança da plataforma, suporte e relacionamento contratual, a pessoa jurídica responsável pelo GRP poderá atuar como controladora.</p>
+          <p>Nos ambientes de empresas clientes, a empresa empregadora normalmente define as finalidades essenciais da avaliação e permanece responsável por suas obrigações de SST e de proteção de dados. Nesses casos, o GRP poderá atuar como operador, tratando dados conforme instruções documentadas da empresa cliente, sem prejuízo de hipóteses em que possua obrigações próprias e independentes.</p>
+          <p>Consultorias e outros prestadores autorizados podem atuar conforme o contrato, a finalidade e as instruções definidas para cada ambiente. A identificação completa da pessoa jurídica responsável pelo GRP e seus canais oficiais deve constar no rodapé desta página e nos documentos comerciais.</p>
+        </div>
+      </section>
+
+      <section id="dados-coletados" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Dados coletados</h2>
+        <div class="privacidade-style-011">
+          <p>Conforme a interação com o GRP, poderemos tratar as seguintes categorias:</p>
+          <ul>
+            <li><strong>Dados de contato e relacionamento:</strong> nome, e-mail, telefone, empresa, cargo/função e conteúdo enviado em formulários de contato, demonstração ou suporte.</li>
+            <li><strong>Dados de conta e acesso:</strong> identificação do usuário administrativo ou técnico, empresa, perfil, escopo de acesso, credenciais protegidas, eventos de autenticação, alterações, aprovações, exportações e demais registros de auditoria.</li>
+            <li><strong>Dados organizacionais:</strong> informações sobre empresa, estabelecimentos, ambientes, processos, atividades, cargos/funções, estruturas e quantitativos populacionais. O modelo do GRP não exige uma base nominal de trabalhadores respondentes para a estrutura organizacional.</li>
+            <li><strong>Dados de campanha:</strong> configurações da campanha, GHE-PS, códigos anônimos de uso único, respostas ao instrumento e dados estritamente necessários ao processamento e à análise coletiva.</li>
+            <li><strong>Evidências complementares:</strong> documentos, sínteses de entrevistas coletivas, observações, indicadores agregados e outros materiais inseridos por usuários autorizados. A empresa cliente deve evitar o envio de dados pessoais excessivos ou desnecessários.</li>
+            <li><strong>Dados técnicos:</strong> endereço IP, data e hora, identificadores de sessão, informações do navegador/dispositivo, registros de erro, segurança e acesso, na medida necessária à operação, proteção e cumprimento de obrigações legais.</li>
+          </ul>
+          <p>O GRP foi projetado para não manter relação persistente entre trabalhador, código anônimo, local/urna de distribuição e resposta. Códigos anônimos servem para controle de uso, não para identificar o conteúdo respondido por determinada pessoa.</p>
+        </div>
+      </section>
+
+      <section id="finalidade-do-tratamento" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Finalidades e bases legais</h2>
+        <div class="privacidade-style-011">
+          <p>Os dados pessoais podem ser tratados para disponibilizar o site e a plataforma, criar e administrar contas, autenticar usuários, prestar suporte, executar contratos, responder solicitações, manter trilhas de auditoria, proteger a segurança do ambiente, prevenir fraudes e abusos, cumprir obrigações legais ou regulatórias e exercer direitos em processos administrativos, judiciais ou arbitrais.</p>
+          <p>Quando aplicável, o tratamento poderá se apoiar nas bases legais previstas nos arts. 7º e 11 da LGPD, incluindo execução de contrato ou procedimentos preliminares, cumprimento de obrigação legal ou regulatória, exercício regular de direitos, legítimo interesse em situações compatíveis com os direitos e expectativas do titular e consentimento para finalidades específicas e facultativas.</p>
+          <p>A base legal das atividades realizadas pela empresa cliente em campanhas com trabalhadores deve ser definida pela própria controladora, considerando a finalidade, a natureza dos dados, as obrigações de SST e a legislação aplicável. O GRP não presume que o consentimento seja, em todos os casos, a base jurídica apropriada para a avaliação ocupacional.</p>
+          <p>Dados pessoais sensíveis eventualmente envolvidos recebem proteção reforçada e somente devem ser tratados quando houver hipótese legal adequada, necessidade demonstrada e salvaguardas compatíveis.</p>
+        </div>
+      </section>
+
+      <section id="anonimato-e-campanhas" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Anonimato e campanhas</h2>
+        <div class="privacidade-style-011">
+          <p>O GRP aplica controles voltados à proteção da identidade dos respondentes. Entre eles estão códigos aleatórios e não sequenciais de uso único, ausência de vínculo persistente entre código e resposta, resultados exclusivamente coletivos, limiar mínimo de população/respostas, supressão de grupos pequenos, supressão secundária, bloqueio de combinações de filtros inseguras e análise de risco de diferenciação.</p>
+          <p>Comentários em campo aberto podem, por iniciativa do próprio respondente, conter nomes, fatos ou detalhes capazes de revelar identidade. Por isso, o participante deve evitar inserir nomes, matrículas, CPF, informações de contato ou outros elementos identificadores. O GRP poderá suprimir ou revisar conteúdos identificáveis antes da divulgação de resultados coletivos, conforme as regras da campanha.</p>
+          <p>O anonimato não deve ser contornado. Tentativas de reidentificação, correlação indevida de códigos, uso de metadados para individualização ou criação de controles paralelos destinados a descobrir quem respondeu determinada informação são incompatíveis com a finalidade da plataforma.</p>
+        </div>
+      </section>
+
+      <section id="compartilhamento-de-dados" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Compartilhamento e transferências</h2>
+        <div class="privacidade-style-011">
+          <p>Dados pessoais podem ser compartilhados apenas quando necessário e compatível com a finalidade, incluindo com a empresa cliente e usuários autorizados de seu ambiente, consultorias formalmente autorizadas, fornecedores de infraestrutura e tecnologia, serviços de autenticação, comunicação, suporte, assinatura eletrônica e outros operadores contratados.</p>
+          <p>Também poderá ocorrer compartilhamento com autoridades públicas ou terceiros quando necessário para cumprir obrigação legal, ordem válida, proteger direitos, prevenir fraude ou responder a incidente de segurança.</p>
+          <p>Caso algum fornecedor envolva transferência internacional de dados pessoais, serão observados os requisitos da LGPD e a regulamentação da ANPD aplicável à transferência internacional. A lista de fornecedores críticos e regiões de hospedagem poderá ser detalhada em contrato, aditivo de proteção de dados ou documento de transparência específico.</p>
+        </div>
+      </section>
+
+      <section id="cookies-e-tecnologias" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Cookies e tecnologias semelhantes</h2>
+        <div class="privacidade-style-011">
+          <p>O site e a plataforma podem utilizar cookies ou tecnologias semelhantes estritamente necessários ao funcionamento, autenticação, segurança e manutenção de preferências.</p>
+          <p>Se forem utilizados cookies não necessários, como ferramentas de analytics, publicidade ou rastreamento, o GRP deverá informar suas finalidades e disponibilizar mecanismo adequado de escolha e gerenciamento de preferências antes de ativá-los, quando exigido pela legislação aplicável.</p>
+          <p>O usuário pode controlar cookies pelo navegador, observando que a desativação de cookies necessários pode comprometer funcionalidades essenciais.</p>
+        </div>
+      </section>
+
+      <section id="direitos-do-titular" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Direitos do titular</h2>
+        <div class="privacidade-style-011">
+          <p>Nos termos da LGPD e conforme aplicável ao caso concreto, o titular pode solicitar confirmação da existência de tratamento, acesso, correção, anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade, portabilidade nos termos da regulamentação, informações sobre compartilhamentos, revogação de consentimento e eliminação de dados tratados com consentimento, ressalvadas as hipóteses legais de conservação.</p>
+          <p>O titular também pode se opor a tratamento realizado em desconformidade e solicitar informações ou revisão quando houver decisão tomada unicamente com base em tratamento automatizado que afete seus interesses.</p>
+          <p>Em operações realizadas em nome de uma empresa cliente, o pedido poderá precisar ser direcionado ou encaminhado à empresa controladora. Quando uma resposta de campanha tiver sido efetivamente anonimizada e não existir meio técnico razoável de associá-la ao participante, o GRP não criará um vínculo de identificação apenas para atender a uma solicitação, pois isso contrariaria o desenho de anonimato.</p>
+          <p>Os pedidos devem ser feitos pelo canal de privacidade ou contato oficial divulgado pela pessoa jurídica responsável pelo GRP. Poderá ser necessária confirmação de identidade para impedir acesso indevido a dados de terceiros.</p>
+        </div>
+      </section>
+
+      <section id="retencao-e-exclusao" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Retenção, anonimização e exclusão</h2>
+        <div class="privacidade-style-011">
+          <p>Os dados pessoais são mantidos apenas pelo período necessário às finalidades informadas, ao contrato, à segurança, à auditoria, ao exercício de direitos e às obrigações legais ou regulatórias aplicáveis.</p>
+          <p>Registros de acesso a aplicações de internet serão mantidos pelo prazo legal aplicável quando a obrigação do Marco Civil da Internet incidir sobre a operação. Outros prazos podem ser definidos em contrato e na política de retenção configurada para cada categoria de informação.</p>
+          <p>Ao término da finalidade, os dados poderão ser excluídos, anonimizados ou conservados nas hipóteses autorizadas pela LGPD. Documentos e registros que precisem preservar rastreabilidade, integridade, aprovação, auditoria ou defesa de direitos poderão permanecer retidos pelo prazo aplicável e com acesso restrito.</p>
+        </div>
+      </section>
+
+      <section id="seguranca-da-informacao" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Segurança da informação e incidentes</h2>
+        <div class="privacidade-style-011">
+          <p>O GRP adota medidas técnicas e administrativas compatíveis com os riscos do tratamento, incluindo segregação lógica por empresa, controle de acesso baseado em papéis, autenticação multifator quando habilitada, trilhas de auditoria, versionamento, controles de privilégio, proteção de credenciais e mecanismos de segurança da aplicação.</p>
+          <p>A arquitetura do projeto prevê criptografia em trânsito e em repouso, além de requisitos de desenvolvimento seguro e controles para evitar alteração silenciosa de registros críticos. Nenhuma medida, entretanto, elimina integralmente os riscos inerentes a sistemas conectados à internet.</p>
+          <p>Incidentes de segurança que envolvam dados pessoais serão avaliados conforme a LGPD e a regulamentação da ANPD. Quando houver obrigação legal de comunicação, o controlador responsável adotará as providências cabíveis perante a ANPD e os titulares afetados, com apoio do operador quando aplicável.</p>
+        </div>
+      </section>
+
+      <section id="contato-do-encarregado" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Contato de privacidade e encarregado</h2>
+        <div class="privacidade-style-011">
+          <p>Solicitações sobre privacidade, proteção de dados e exercício de direitos devem ser enviadas pelos canais oficiais informados no rodapé desta página ou pelos canais definidos no contrato da empresa cliente.</p>
+          <p>Quando houver encarregado pelo tratamento de dados pessoais formalmente indicado e sua divulgação for exigível, sua identidade e informações de contato serão disponibilizadas publicamente de forma clara e objetiva.</p>
+        </div>
+      </section>
+
+      <section id="alteracoes-desta-politica" class="privacidade-style-009">
+        <h2 class="privacidade-style-010">Alterações desta Política</h2>
+        <div class="privacidade-style-011">
+          <p>Esta Política poderá ser atualizada para refletir mudanças legais, regulatórias, tecnológicas, contratuais ou funcionais. A data da última atualização será indicada no início da página. Alterações materiais poderão ser comunicadas por aviso no site, na plataforma ou por outro canal apropriado.</p>
+        </div>
+      </section>
     </article>
   </div>
 </main>
+
 <footer class="privacidade-style-012">
   <div class="privacidade-style-013">
     <div>
@@ -64,7 +193,7 @@
     <div>
       <div class="privacidade-style-016">Contato</div>
       <div class="privacidade-style-019">
-        <a href="#" class="privacidade-style-020">Falar no WhatsApp</a>
+        <a href="https://api.whatsapp.com/send/?phone=553199741568" class="privacidade-style-020">Falar no WhatsApp</a>
         <span class="privacidade-style-021">CNPJ: [A DEFINIR]</span>
         <span class="privacidade-style-021">Endereço: [A DEFINIR]</span>
       </div>
@@ -78,19 +207,22 @@ class Component extends DCLogic {
   renderVals() {
     return {
       sumario: [
-        { id: 'introducao', label: 'Introdução' },
-        { id: 'dados-coletados', label: 'Dados coletados' },
-        { id: 'finalidade-do-tratamento', label: 'Finalidade do tratamento' },
-        { id: 'compartilhamento-de-dados', label: 'Compartilhamento de dados' },
-        { id: 'direitos-do-titular', label: 'Direitos do titular' },
-        { id: 'retencao-e-exclusao', label: 'Retenção e exclusão' },
-        { id: 'seguranca-da-informacao', label: 'Segurança da informação' },
-        { id: 'contato-do-encarregado', label: 'Contato do encarregado' },
+        { id: 'introducao', href: '#introducao', label: 'Introdução e abrangência' },
+        { id: 'agentes-de-tratamento', href: '#agentes-de-tratamento', label: 'Agentes de tratamento' },
+        { id: 'dados-coletados', href: '#dados-coletados', label: 'Dados coletados' },
+        { id: 'finalidade-do-tratamento', href: '#finalidade-do-tratamento', label: 'Finalidades e bases legais' },
+        { id: 'anonimato-e-campanhas', href: '#anonimato-e-campanhas', label: 'Anonimato e campanhas' },
+        { id: 'compartilhamento-de-dados', href: '#compartilhamento-de-dados', label: 'Compartilhamento e transferências' },
+        { id: 'cookies-e-tecnologias', href: '#cookies-e-tecnologias', label: 'Cookies e tecnologias' },
+        { id: 'direitos-do-titular', href: '#direitos-do-titular', label: 'Direitos do titular' },
+        { id: 'retencao-e-exclusao', href: '#retencao-e-exclusao', label: 'Retenção e exclusão' },
+        { id: 'seguranca-da-informacao', href: '#seguranca-da-informacao', label: 'Segurança da informação' },
+        { id: 'contato-do-encarregado', href: '#contato-do-encarregado', label: 'Contato de privacidade' },
+        { id: 'alteracoes-desta-politica', href: '#alteracoes-desta-politica', label: 'Alterações desta Política' },
       ],
     };
   }
 }
-
 </script>
 </body>
 </html>

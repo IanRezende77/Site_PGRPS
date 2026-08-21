@@ -20,26 +20,182 @@
 <script src="../site.js" defer></script>
 </helmet>
 <dc-import name="Header" from="../Header.dc.html" logo-src="../assets/grp-symbol.png" hint-size="100%,72px"></dc-import>
+
+<!--
+  IMPORTANTE ANTES DA PUBLICAÇÃO:
+  1) preencher CNPJ, endereço, WhatsApp e canais oficiais;
+  2) conferir regras comerciais efetivas de preço, renovação, cancelamento e reembolso;
+  3) alinhar o texto ao contrato comercial/SLA e aos fornecedores efetivamente utilizados;
+  4) validar a versão final com o jurídico da pessoa jurídica responsável pelo GRP.
+
+  Referências consideradas na redação:
+  - Lei nº 13.709/2018 (LGPD);
+  - Lei nº 12.965/2014 (Marco Civil da Internet) e Decreto nº 8.771/2016;
+  - Lei nº 9.609/1998 (Software) e Lei nº 9.610/1998 (Direitos Autorais);
+  - Código Civil brasileiro;
+  - NR-1/NR-17 e orientações oficiais do MTE aplicáveis ao contexto do produto;
+  - documentação oficial GRP v2.1, de 12/08/2026.
+-->
+
 <main class="termos-style-001">
   <div class="termos-style-002">
     <nav aria-label="Sumário" class="termos-style-003">
-      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="9">
+      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="15">
         <a href="{{ s.href }}" class="termos-style-004">{{ s.label }}</a>
       </sc-for>
     </nav>
+
     <article class="termos-style-005">
       <h1 class="termos-style-006">Termos de Uso</h1>
-      <p class="termos-style-007">Última atualização: [A DEFINIR]</p>
-      <div class="termos-style-008 surface-card">Conteúdo jurídico pendente de revisão pelo time legal. Esta página traz apenas a estrutura de seções aprovada.</div>
-      <sc-for list="{{ sumario }}" as="s" hint-placeholder-count="9">
-        <section id="{{ s.id }}" class="termos-style-009">
-          <h2 class="termos-style-010">{{ s.label }}</h2>
-          <div class="termos-style-011">[Conteúdo jurídico pendente]</div>
-        </section>
-      </sc-for>
+      <p class="termos-style-007">Última atualização: 21 de agosto de 2026</p>
+
+      <div class="termos-style-008 surface-card">
+        Estes Termos regulam o acesso e o uso do site e da plataforma GRP — Gestão de Riscos Psicossociais Relacionados ao Trabalho. O GRP é uma ferramenta de apoio à gestão e não substitui obrigações legais, decisões da empresa empregadora, avaliação do responsável técnico ou atuação de profissionais competentes em SST.
+      </div>
+
+      <section id="aceitacao-dos-termos" class="termos-style-009">
+        <h2 class="termos-style-010">Aceitação dos termos</h2>
+        <div class="termos-style-011">
+          <p>Ao acessar o site, criar uma conta, utilizar uma credencial autorizada, contratar ou usar a plataforma GRP, o usuário declara ter lido e compreendido estes Termos e a Política de Privacidade.</p>
+          <p>Quando o acesso ocorrer em nome de uma empresa, consultoria ou outra organização, o usuário declara possuir autorização suficiente para atuar dentro do escopo de acesso concedido. Condições comerciais, proposta, ordem de serviço, contrato, SLA, aditivo de proteção de dados ou instrumento específico poderão complementar estes Termos e prevalecer sobre eles em caso de conflito quanto ao objeto específico contratado.</p>
+        </div>
+      </section>
+
+      <section id="descricao-do-servico" class="termos-style-009">
+        <h2 class="termos-style-010">Descrição do serviço</h2>
+        <div class="termos-style-011">
+          <p>O GRP é uma plataforma SaaS multiempresa destinada a apoiar a identificação, caracterização, avaliação, tratamento, acompanhamento e melhoria contínua de riscos psicossociais relacionados ao trabalho.</p>
+          <p>Dependendo do plano, versão e configuração contratada, a plataforma poderá incluir cadastro e caracterização organizacional, campanhas anônimas, instrumentos psicossociais, códigos anônimos, análise coletiva, evidências complementares, avaliação técnica, inventário de riscos psicossociais, plano de ação, acompanhamento de medidas, avaliação de eficácia, risco residual, documentos, auditoria, integrações e relatórios.</p>
+          <p>Funcionalidades podem ser disponibilizadas progressivamente, alteradas ou substituídas para evolução técnica, segurança, cumprimento legal ou melhoria do produto, respeitados os compromissos contratuais aplicáveis.</p>
+        </div>
+      </section>
+
+      <section id="limites-do-produto" class="termos-style-009">
+        <h2 class="termos-style-010">Natureza e limites do produto</h2>
+        <div class="termos-style-011">
+          <p>O GRP organiza informações e apoia o processo de gestão, mas sua simples utilização não garante conformidade integral com NR-1, NR-17, LGPD ou qualquer outra obrigação legal, regulatória, técnica ou contratual.</p>
+          <p>A plataforma não realiza diagnóstico clínico, médico ou psicológico individual; não constitui prontuário de saúde; não deve ser usada para ranking, perfilamento, pontuação individual, seleção, punição ou decisão automatizada sobre trabalhadores.</p>
+          <p>Questionários e resultados quantitativos são fontes de evidência e não constituem, isoladamente, conclusão automática sobre nível de risco ocupacional. A análise deve considerar o contexto do trabalho, evidências complementares, metodologia aplicável e validação do responsável técnico quando exigida.</p>
+        </div>
+      </section>
+
+      <section id="cadastro-e-conta" class="termos-style-009">
+        <h2 class="termos-style-010">Cadastro, contas e credenciais</h2>
+        <div class="termos-style-011">
+          <p>Contas administrativas e técnicas são pessoais e devem refletir usuários autorizados. O usuário deve fornecer informações verdadeiras, manter seus dados atualizados, proteger sua senha e demais fatores de autenticação e não compartilhar credenciais.</p>
+          <p>O titular da conta é responsável pelas ações realizadas com suas credenciais quando houver culpa, compartilhamento indevido, negligência ou descumprimento das orientações de segurança. Suspeitas de comprometimento devem ser comunicadas ao suporte imediatamente.</p>
+          <p>O GRP poderá aplicar autenticação multifator, controle de acesso baseado em papéis, restrições por empresa, estabelecimento, campanha ou perfil, além de registrar eventos de auditoria para fins de segurança, integridade e rastreabilidade.</p>
+        </div>
+      </section>
+
+      <section id="uso-permitido" class="termos-style-009">
+        <h2 class="termos-style-010">Uso permitido e condutas proibidas</h2>
+        <div class="termos-style-011">
+          <p>O GRP deve ser utilizado exclusivamente para finalidades lícitas, profissionais e compatíveis com a gestão de riscos psicossociais relacionados ao trabalho e com o escopo contratado.</p>
+          <p>É proibido, entre outros:</p>
+          <ul>
+            <li>tentar identificar ou reidentificar respondentes de campanhas anônimas;</li>
+            <li>criar listas paralelas que relacionem trabalhador, código anônimo, local/urna de distribuição e resposta;</li>
+            <li>usar resultados para perseguição, discriminação, retaliação, ranking ou decisão individual sobre trabalhador;</li>
+            <li>inserir intencionalmente malware, explorar vulnerabilidades, contornar controles de acesso, realizar varreduras não autorizadas ou comprometer a disponibilidade do serviço;</li>
+            <li>acessar dados, empresas, campanhas ou documentos fora do escopo autorizado;</li>
+            <li>copiar, alterar, vender, sublicenciar, disponibilizar ou explorar o software e seus componentes além do permitido em contrato ou pela legislação;</li>
+            <li>utilizar a plataforma para conteúdo ilícito ou que viole direitos de terceiros.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="anonimato-e-confidencialidade" class="termos-style-009">
+        <h2 class="termos-style-010">Anonimato e confidencialidade das campanhas</h2>
+        <div class="termos-style-011">
+          <p>A arquitetura do GRP adota anonimato por concepção para respostas de campanhas, com códigos aleatórios de uso único sem vínculo persistente com a resposta, análise coletiva, limiar mínimo, supressões e bloqueio de filtros que possam aumentar o risco de reidentificação.</p>
+          <p>A empresa cliente, seus usuários, consultorias e demais pessoas com acesso devem respeitar essas salvaguardas e não podem combinar dados internos, registros externos ou informações de distribuição com a finalidade de reconstruir a identidade de respondentes.</p>
+          <p>O participante deve evitar escrever, em campos abertos, nomes, matrículas, CPF ou outros dados que o identifiquem ou identifiquem terceiros, salvo quando o formulário informar de modo claro que a informação é necessária e não integra a coleta anônima.</p>
+        </div>
+      </section>
+
+      <section id="responsabilidades-do-cliente" class="termos-style-009">
+        <h2 class="termos-style-010">Responsabilidades da empresa cliente e usuários</h2>
+        <div class="termos-style-011">
+          <p>A empresa cliente permanece responsável pelas obrigações de SST que lhe forem aplicáveis, pela definição do escopo da avaliação, pelas condições de participação dos trabalhadores, pela veracidade das informações fornecidas, pela indicação dos responsáveis competentes, pela definição das bases legais de tratamento de dados e pela implementação das medidas preventivas cabíveis.</p>
+          <p>A empresa cliente deve utilizar instrumentos, metodologias, documentos e informações de forma compatível com licenças, direitos autorais, validade técnica, população avaliada e finalidade da campanha. Quando houver responsável técnico designado, cabe a ele realizar as validações e aprovações técnicas previstas no processo.</p>
+          <p>Usuários autorizados devem respeitar o princípio do menor privilégio, confidencialidade, segurança da informação, sigilo de documentos e limites do perfil concedido.</p>
+        </div>
+      </section>
+
+      <section id="propriedade-intelectual" class="termos-style-009">
+        <h2 class="termos-style-010">Propriedade intelectual</h2>
+        <div class="termos-style-011">
+          <p>O software GRP, sua interface, código, identidade visual, documentação própria, modelos, estrutura de navegação e demais elementos protegidos pertencem aos seus respectivos titulares e são protegidos pela legislação brasileira aplicável, incluindo as normas de proteção a programas de computador e direitos autorais.</p>
+          <p>A contratação ou utilização do GRP concede apenas licença limitada, não exclusiva, intransferível e condicionada ao contrato para acesso e uso da plataforma. Não há transferência de titularidade sobre o software, código-fonte, marcas ou demais ativos intelectuais.</p>
+          <p>Instrumentos psicossociais, escalas, normas técnicas e conteúdos de terceiros permanecem sujeitos às licenças e direitos de seus respectivos titulares. Sua disponibilização no GRP não implica cessão desses direitos.</p>
+        </div>
+      </section>
+
+      <section id="privacidade-e-dados" class="termos-style-009">
+        <h2 class="termos-style-010">Privacidade e proteção de dados</h2>
+        <div class="termos-style-011">
+          <p>O tratamento de dados pessoais relacionado ao GRP observará a Política de Privacidade e, quando aplicável, o contrato e o aditivo de proteção de dados firmado com a empresa cliente.</p>
+          <p>Os papéis de controlador e operador devem ser definidos conforme a operação concreta. A empresa cliente não deve inserir dados pessoais excessivos, especialmente dados de saúde individual, prontuários, atestados nominais ou informações sem necessidade para a finalidade da plataforma.</p>
+          <p>Solicitações de titulares serão tratadas conforme a LGPD e os papéis de cada agente. Em respostas efetivamente anônimas, não será criado vínculo de identificação com o objetivo de individualizar um participante.</p>
+        </div>
+      </section>
+
+      <section id="disponibilidade-e-terceiros" class="termos-style-009">
+        <h2 class="termos-style-010">Disponibilidade, manutenção e serviços de terceiros</h2>
+        <div class="termos-style-011">
+          <p>O GRP busca manter disponibilidade e segurança compatíveis com o serviço contratado, mas poderá realizar manutenções programadas ou emergenciais e depender de serviços de infraestrutura, conectividade, autenticação, comunicação, assinatura ou outros fornecedores externos.</p>
+          <p>Metas específicas de disponibilidade, suporte, backup, recuperação, RPO, RTO e atendimento somente serão vinculantes quando previstas em contrato ou SLA.</p>
+          <p>Interrupções causadas por terceiros, internet, caso fortuito, força maior, ataques, uso indevido, indisponibilidade de integrações ou eventos fora do controle razoável serão tratadas conforme a legislação e o contrato aplicável.</p>
+        </div>
+      </section>
+
+      <section id="condicoes-comerciais" class="termos-style-009">
+        <h2 class="termos-style-010">Planos, pagamentos e condições comerciais</h2>
+        <div class="termos-style-011">
+          <p>Preço, modalidade de cobrança, quantidade de usuários, empresas, estabelecimentos, campanhas, limites de uso, vigência, renovação, reajustes, tributos, forma de pagamento e demais condições comerciais serão definidos na proposta, pedido, checkout, contrato ou instrumento equivalente.</p>
+          <p>O GRP não processará cobrança ou renovação em desacordo com as condições apresentadas ao contratante. Caso sejam utilizados intermediadores de pagamento, as operações também estarão sujeitas às regras e políticas do respectivo fornecedor.</p>
+        </div>
+      </section>
+
+      <section id="cancelamento" class="termos-style-009">
+        <h2 class="termos-style-010">Suspensão, cancelamento e encerramento</h2>
+        <div class="termos-style-011">
+          <p>O acesso poderá ser suspenso ou encerrado em caso de término do contrato, inadimplemento, risco de segurança, uso ilícito, tentativa de reidentificação, violação de propriedade intelectual ou descumprimento material destes Termos, observadas as condições contratuais e a legislação aplicável.</p>
+          <p>As regras de cancelamento, aviso prévio, eventuais reembolsos, exportação de dados, devolução de documentos e período de transição serão aquelas previstas no instrumento comercial aplicável.</p>
+          <p>Após o encerramento, dados e documentos serão tratados conforme a Política de Privacidade, a política de retenção, obrigações legais, direitos das partes e regras de preservação de auditoria e documentos aprovados.</p>
+        </div>
+      </section>
+
+      <section id="responsabilidades" class="termos-style-009">
+        <h2 class="termos-style-010">Responsabilidades e limitações</h2>
+        <div class="termos-style-011">
+          <p>Cada parte responde por suas próprias obrigações legais, contratuais e por danos decorrentes de conduta que lhe seja imputável, nos limites previstos pela legislação aplicável.</p>
+          <p>O GRP não se responsabiliza por decisões técnicas, trabalhistas, médicas, psicológicas, disciplinares ou de gestão tomadas exclusivamente pela empresa cliente ou por seus profissionais a partir de interpretação inadequada, uso fora do escopo, dados incorretos ou desconsideração das limitações metodológicas apresentadas pela plataforma.</p>
+          <p>Nenhuma disposição destes Termos exclui ou restringe responsabilidade que não possa ser validamente excluída pela legislação brasileira.</p>
+        </div>
+      </section>
+
+      <section id="alteracoes-destes-termos" class="termos-style-009">
+        <h2 class="termos-style-010">Alterações destes termos</h2>
+        <div class="termos-style-011">
+          <p>Estes Termos poderão ser atualizados em razão de mudanças legais, regulatórias, tecnológicas, de segurança ou do produto. A versão vigente indicará a data da última atualização.</p>
+          <p>Quando a mudança afetar materialmente direitos ou obrigações de usuários ativos, será adotado meio razoável de comunicação. Condições comerciais já contratadas permanecem sujeitas ao instrumento específico, salvo alteração acordada entre as partes ou exigida por lei.</p>
+        </div>
+      </section>
+
+      <section id="foro-e-legislacao-aplicavel" class="termos-style-009">
+        <h2 class="termos-style-010">Legislação aplicável, foro e contato</h2>
+        <div class="termos-style-011">
+          <p>Estes Termos são regidos pelas leis da República Federativa do Brasil.</p>
+          <p>Eventuais controvérsias serão submetidas ao foro definido no contrato ou, na ausência de previsão específica, ao foro da sede da pessoa jurídica responsável pelo GRP, ressalvadas regras legais de competência obrigatória e direitos aplicáveis em relações de consumo.</p>
+          <p>Dúvidas sobre estes Termos devem ser encaminhadas aos canais oficiais de contato indicados no rodapé desta página.</p>
+        </div>
+      </section>
     </article>
   </div>
 </main>
+
 <footer class="termos-style-012">
   <div class="termos-style-013">
     <div>
@@ -64,7 +220,7 @@
     <div>
       <div class="termos-style-016">Contato</div>
       <div class="termos-style-019">
-        <a href="#" class="termos-style-020">Falar no WhatsApp</a>
+        <a href="https://api.whatsapp.com/send/?phone=553199741568" class="termos-style-020">Falar no WhatsApp</a>
         <span class="termos-style-021">CNPJ: [A DEFINIR]</span>
         <span class="termos-style-021">Endereço: [A DEFINIR]</span>
       </div>
@@ -78,20 +234,25 @@ class Component extends DCLogic {
   renderVals() {
     return {
       sumario: [
-        { id: 'aceitacao-dos-termos', label: 'Aceitação dos termos' },
-        { id: 'descricao-do-servico', label: 'Descrição do serviço' },
-        { id: 'cadastro-e-conta', label: 'Cadastro e conta' },
-        { id: 'uso-permitido', label: 'Uso permitido' },
-        { id: 'propriedade-intelectual', label: 'Propriedade intelectual' },
-        { id: 'responsabilidades', label: 'Responsabilidades' },
-        { id: 'cancelamento', label: 'Cancelamento' },
-        { id: 'alteracoes-destes-termos', label: 'Alterações destes termos' },
-        { id: 'foro-e-legislacao-aplicavel', label: 'Foro e legislação aplicável' },
+        { id: 'aceitacao-dos-termos', href: '#aceitacao-dos-termos', label: 'Aceitação dos termos' },
+        { id: 'descricao-do-servico', href: '#descricao-do-servico', label: 'Descrição do serviço' },
+        { id: 'limites-do-produto', href: '#limites-do-produto', label: 'Natureza e limites do produto' },
+        { id: 'cadastro-e-conta', href: '#cadastro-e-conta', label: 'Cadastro e conta' },
+        { id: 'uso-permitido', href: '#uso-permitido', label: 'Uso permitido' },
+        { id: 'anonimato-e-confidencialidade', href: '#anonimato-e-confidencialidade', label: 'Anonimato e confidencialidade' },
+        { id: 'responsabilidades-do-cliente', href: '#responsabilidades-do-cliente', label: 'Responsabilidades do cliente' },
+        { id: 'propriedade-intelectual', href: '#propriedade-intelectual', label: 'Propriedade intelectual' },
+        { id: 'privacidade-e-dados', href: '#privacidade-e-dados', label: 'Privacidade e dados' },
+        { id: 'disponibilidade-e-terceiros', href: '#disponibilidade-e-terceiros', label: 'Disponibilidade e terceiros' },
+        { id: 'condicoes-comerciais', href: '#condicoes-comerciais', label: 'Condições comerciais' },
+        { id: 'cancelamento', href: '#cancelamento', label: 'Cancelamento' },
+        { id: 'responsabilidades', href: '#responsabilidades', label: 'Responsabilidades' },
+        { id: 'alteracoes-destes-termos', href: '#alteracoes-destes-termos', label: 'Alterações destes termos' },
+        { id: 'foro-e-legislacao-aplicavel', href: '#foro-e-legislacao-aplicavel', label: 'Foro e legislação aplicável' },
       ],
     };
   }
 }
-
 </script>
 </body>
 </html>
