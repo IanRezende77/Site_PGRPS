@@ -288,16 +288,16 @@ header nav a[aria-current="page"] {
 
 .header-style-010 {
   font:500 13.5px Inter,system-ui,sans-serif;
-  color:var(--color-disabled);
+  color:var(--color-muted);
   text-decoration:none;
   margin-left:2px;
   white-space:nowrap;
   flex-shrink:0;
-  cursor:default;
+  cursor:pointer;
 }
 
 .header-state-011:hover {
-  color:var(--color-muted);
+  color:var(--color-primary);
 }
 
 .header-style-012 {
@@ -391,7 +391,7 @@ header nav a[aria-current="page"] {
 
 .header-style-022 {
   font:500 14.5px Inter,system-ui,sans-serif;
-  color:var(--color-disabled);
+  color:var(--color-muted);
   text-decoration:none;
   padding:14px 4px;
   margin-top:4px;
