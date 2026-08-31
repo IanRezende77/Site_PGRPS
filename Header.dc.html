@@ -26,7 +26,7 @@
           <a href="{{ item.href }}" class="header-style-006 header-state-007">{{ item.label }}</a>
         </sc-for>
         <a href="Demonstracao.dc.html" class="header-style-008 action-button header-state-009">Solicitar demonstração</a>
-        <a href="https://grp.pgrps.com.br/" class="header-style-010 header-state-011">Entrar</a>
+        <a href="https://grp.pgrps.com.br/" title="Em breve" class="header-style-010 header-state-011">Entrar</a>
       </nav>
     </sc-if>
     <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
@@ -47,7 +47,7 @@
         <sc-for list="{{ navItems }}" as="item" hint-placeholder-count="6">
           <a href="{{ item.href }}" onClick="{{ closeMenu }}" class="header-style-021">{{ item.label }}</a>
         </sc-for>
-        <a href="https://grp.pgrps.com.br/" onClick="{{ closeMenu }}" class="header-style-022">Entrar</a>
+        <a href="#" title="Em breve" onClick="{{ closeMenu }}" class="header-style-022">Entrar</a>
       </nav>
       <a href="Demonstracao.dc.html" class="header-style-023 action-button">Solicitar demonstração</a>
     </div>
